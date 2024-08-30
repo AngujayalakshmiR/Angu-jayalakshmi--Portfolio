@@ -1002,7 +1002,7 @@ color: var(--secon-bg-color);
 
 @media (min-width: 920px){
     html{
-        font-size: 110%;
+        font-size: 100%;
      }
      footer p{
         font-size: .9rem;
@@ -1017,13 +1017,12 @@ color: var(--secon-bg-color);
         position: relative;
     }
     .about, .quali, .certificates, .services, .skills, .contant, footer, .home{
-        width: 150%;
+        width: 85%;
         box-sizing: content-box;
     }
     .portfolio{
-        width: 120%;
+        width: 100%;
         position: relative;
-        left: 25%;
     }
     .acontainer {
         position: relative;
@@ -1054,7 +1053,7 @@ color: var(--secon-bg-color);
     min-height: fit-content;
    }
    .atext-box{
-    font-size: large;
+    font-size: medium;
     width: 550px;
    }
    .atext-box p{
@@ -1081,9 +1080,13 @@ color: var(--secon-bg-color);
         align-items: center;
         position: relative;
     }
-    .about, .quali, .certificates, .services, .skills, .portfolio, .contant, footer, .home{
-        width: 150%;
+    .about, .quali, .certificates, .services, .skills, .contant, footer, .home{
+        width: 94%;
         box-sizing: content-box;
+    }
+    .portfolio{
+        width: 94%;
+        position: relative;
     }
     .acontainer {
         position: relative;
@@ -1140,8 +1143,8 @@ color: var(--secon-bg-color);
         align-items: center;
         position: relative;
     }
-    .about, .quali, .certificates, .services, .skills, .portfolio, .contant, footer, .home{
-        width: 150%;
+    .about, .quali, .certificates, .services, .skills, .contant,.portfolio, footer, .home{
+        width: 125%;
         box-sizing: content-box;
     }
     .acontainer {
@@ -1196,10 +1199,10 @@ color: var(--secon-bg-color);
        align-items: center;
        position: relative;
    }
-   .about, .quali, .certificates, .services, .skills, .portfolio, .contant, footer, .home{
-       width: 250%;
-       box-sizing: content-box;
-   }
+   .about, .quali, .certificates, .services, .skills,.portfolio ,.contant, footer, .home{
+    width: 210%;
+    box-sizing: content-box;
+}
    .acontainer {
        position: relative;
        width: 400px;
