@@ -1,0 +1,814 @@
+<!DOCTYPE html><html lang="en" class="export"><head>
+  <meta charset="utf-8">
+  <meta name="description" content="Touch, responsive, flickable carousels">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Flickity v2 · Touch, responsive, flickable carousels</title>
+
+    <link rel="stylesheet" href="css/flickity-docs.css?6" media="screen">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@metafizzyco">
+  <meta name="twitter:url" content="https://flickity.metafizzy.co/index.html">
+  <meta name="twitter:title" content="Flickity">
+  <meta name="twitter:description" content="Touch, responsive, flickable carousels">
+
+</head>
+<body class="page--index">
+
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="hero-carousel" data-flickity="" data-js="hero-carousel">
+    <div class="hero-carousel__cell hero-carousel__cell--1">
+      <div class="hero-carousel__cell__content">
+        <h1>Flickity</h1>
+        <p class="tagline">Touch, responsive, flickable&nbsp;carousels</p>
+        <div class="gh-button-row">
+          <a class="gh-button" href="https://github.com/metafizzy/flickity" data-js="gh-button">
+            <span class="gh-button__title">
+              <svg class="github-logo" viewBox="0 0 512 512">
+                <path d="M256 0C115 0 0 115 0 256c0 113 73 209 175 243 13 2 18-5 18-12v-48c-64 12-81-16-86-30-3-7-15-30-26-36-9-5-22-17 0-17 20 0 35 19 39 26 23 39 60 28 75 21 2-17 9-28 16-34-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-33 3-68 0 0 21-7 70 26 20-6 42-9 64-9s43 3 64 9c49-33 70-26 70-26 14 35 5 61 3 68 16 18 26 41 26 69 0 98-60 120-117 126 9 8 17 23 17 47v70c0 7 5 15 18 12 100-33 173-129 173-242C512 115 397 0 256 0z"></path>
+              </svg>
+              <span class="gh-button__title__text">Flickity on GitHub</span>
+            </span>
+            <span class="gh-button__stat">
+              <svg class="gh-button__icon gh-button__icon--star" viewBox="0 0 896 1024">
+                <path d="M896 384l-313-41L448 64 313 343 0 384l230 208L171 895l277-149 277 148L665 593 896 384z"></path>
+              </svg>
+              <span class="gh-button__stat__text">4,400</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-carousel__cell hero-carousel__cell--2">
+      <div class="hero-carousel__cell__content">
+        <p class="slogan slogan--easy">Easy to use.</p>
+        <p class="slogan slogan--fun">Fun to flick.</p>
+        <p class="slogan slogan--tagline">Flickity makes carousels, galleries, &amp; sliders that feel lively and effortless.</p>
+      </div>
+    </div>
+    <div class="hero-carousel__cell hero-carousel__cell--3">
+      <div class="hero-carousel__cell__content">
+        <ul class="feature-list">
+          <li>Physics-based animation</li>
+          <li>Touch enable</li>
+          <li class="hidden-small">Responsive styling</li>
+          <li class="hidden-small">Full-feature API</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero-carousel__cell hero-carousel__cell--4">
+      <div class="hero-carousel__cell__content">
+        <p class="by-line by-line--made">Made by <b>Metafizzy</b>.</p>
+        <p class="by-line by-line--you hidden-small">You make the things that matter.</p>
+        <p class="by-line by-line--we">We make the widgets.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="main">
+  <div class="container">
+
+      <div class="duo">
+        <div class="duo__cell">
+          <a class="chunky-button chunky-button--fill" href="flickity.pkgd.min.js">
+            <i class="chunky-button__icon">
+              <svg class="js-file" xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 500 500">
+                <path d="M218 230V332c0 30-12 42-35 42c-2 0-10-1-11-1l2-20c1 0 6 1 7 1c15 0 13-18 13-20
+                  V230H218z M299 256c-2-3-10-10-21-10c-10 0-15 4-15 10c0 9 10 10 21 13c19 4 31 13 31 29
+                  c0 17-10 32-40 32c-18 0-32-8-39-16l16-15c3 4 11 12 25 12c14 0 15-9 15-11
+                  c0-8-6-10-22-14c-16-4-28-11-28-27c0-21 18-31 38-31c21 0 32 10 36 15L299 256z
+                   M206 183c-9 0-15 6-15 14s7 14 15 14s15-6 15-14S214 183 206 183z M445 149
+                  c0-0 0-1 0-1c-0-1-0-2-0-2c0 0 0-0 0-0c-0-1-0-2-1-3c-0-0-0-0-0-1
+                  c-0-1-1-2-1-2c0-0-0-0-0-0c-0-1-1-2-1-2c-0-0-0-0-0-1c-1-1-1-1-2-2
+                  c0 0 0 0 0 0l-125-125c0 0 0 0 0 0c-1-1-1-1-2-2c-0-0-0-0-1-0c-1-1-1-1-2-1c-0 0-0-0-0-0
+                  c-1-0-2-1-2-1c-0-0-0-0-1-0c-1-0-2-1-3-1c0 0-0 0-0 0c-1-0-2-0-2-0
+                  c-0 0-1 0-1 0c-0 0-0 0-1 0H100C75 5 55 25 55 50v400c0 25 20 45 45 45h300c25 0 45-20 45-45V150
+                  C445 150 445 150 445 149z M320 73l57 57H320V73z M400 455H100c-3 0-5-2-5-5V50c0-3 2-5 5-5h180v105
+                  c0 11 9 20 20 20h105v280C405 453 403 455 400 455z"></path>
+              </svg>
+            </i>
+            <span class="chunky-button__text">
+              <span class="chunky-button__text__plain">Download</span>
+              <b class="chunky-button__text__strong">flickity.pkgd.min.js</b>
+            </span>
+          </a>
+        </div>
+        <div class="duo__cell">
+          <a class="chunky-button chunky-button--fill" href="flickity.css">
+            <i class="chunky-button__icon">
+              <svg class="css-file-outline" xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 500 500">
+                <path d="M192 257c-2-3-9-9-20-9c-17 0-26 15-26 31c0 13 8 31 27 31c12 0 18-6 20-9
+                  l15 15c-4 4-15 13-35 13c-33 0-52-23-52-51c0-34 27-51 51-51c21 0 32 10 36 15L192 257z
+                  M277 256c-2-3-10-10-21-10c-10 0-15 4-15 10c0 9 10 10 21 13c19 4 31 13 31 29
+                  c0 17-10 32-40 32c-18 0-32-8-39-16l16-15c3 4 11 12 25 12c14 0 15-9 15-11
+                  c0-8-6-10-22-14c-16-4-28-11-28-27c0-21 18-31 38-31c21 0 32 10 36 15L277 256z
+                  M366 256c-2-3-10-10-21-10c-10 0-15 4-15 10c0 9 10 10 21 13c19 4 31 13 31 29
+                  c0 17-10 32-40 32c-18 0-32-8-39-16l16-15c3 4 11 12 25 12c14 0 15-9 15-11
+                  c0-8-6-10-22-14c-16-4-28-11-28-27c0-21 18-31 38-31c21 0 32 10 36 15L366 256z
+                  M445 149c0-0 0-1 0-1c-0-1-0-2-0-2c0 0 0-0 0-0c-0-1-0-2-1-3c-0-0-0-0-0-1
+                  c-0-1-1-2-1-2c0-0-0-0-0-0c-0-1-1-2-1-2c-0-0-0-0-0-1c-1-1-1-1-2-2
+                  c0 0 0 0 0 0l-125-125c0 0 0 0 0 0c-1-1-1-1-2-2c-0-0-0-0-1-0c-1-1-1-1-2-1c-0 0-0-0-0-0
+                  c-1-0-2-1-2-1c-0-0-0-0-1-0c-1-0-2-1-3-1c0 0-0 0-0 0c-1-0-2-0-2-0
+                  c-0 0-1 0-1 0c-0 0-0 0-1 0H100C75 5 55 25 55 50v400c0 25 20 45 45 45h300c25 0 45-20 45-45V150
+                  C445 150 445 150 445 149z M320 73l57 57H320V73z M400 455H100c-3 0-5-2-5-5V50c0-3 2-5 5-5h180v105
+                  c0 11 9 20 20 20h105v280C405 453 403 455 400 455z"></path>
+              </svg>
+            </i>
+            <span class="chunky-button__text">
+              <span class="chunky-button__text__plain">Download</span>
+              <b class="chunky-button__text__strong">flickity.css</b>
+            </span>
+          </a>
+        </div>
+      </div>
+      
+
+    <ul class="page-nav" data-js="page-nav">
+<li class="page-nav__item page-nav__item--h2">
+        <a href="#install">Install</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#download">Download</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#cdn">CDN</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#package-managers">Package managers</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#license">License</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#commercial-license">Commercial license</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#open-source-license">Open source license</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#getting-started">Getting started</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#initialize-with-jquery">Initialize with jQuery</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#initialize-with-vanilla-javascript">Initialize with vanilla JavaScript</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#initialize-with-html">Initialize with HTML</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#next">Next</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#feature-showcase">Feature showcase</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#wraparound">wrapAround</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#freescroll">freeScroll</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#groupcells">groupCells</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#autoplay">autoPlay</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#lazyload">lazyLoad</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#parallax">Parallax</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#images">Images</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#view-all-options">View all options</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#flickity-in-use">Flickity in use</a>
+      </li></ul>
+
+
+
+<h2 id="install">Install</h2>
+
+
+<h3 id="download">Download</h3>
+
+<ul>
+  <li>
+    CSS:
+    <ul>
+      <li><a href="flickity.min.css">flickity.min.css</a> minified, or</li>
+      <li><a href="flickity.css">flickity.css</a> un-minified</li>
+    </ul>
+  </li>
+  <li>
+    JavaScript:
+    <ul>
+      <li><a href="flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified, or</li>
+      <li><a href="flickity.pkgd.js">flickity.pkgd.js</a> un-minified</li>
+    </ul>
+  </li>
+</ul>
+
+
+<h3 id="cdn">CDN</h3>
+
+<p>Link directly to Flickity files on <a href="https://unpkg.com/">unpkg</a>.</p>
+<pre><code class=" html
+"><span class="comment">&lt;!-- CSS --&gt;</span>
+<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/flickity@2/dist/flickity.min.css"</span>&gt;</span>
+</code></pre>
+<pre><code class=" html
+"><span class="comment">&lt;!-- JavaScript --&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+</code></pre>
+
+
+<h3 id="package-managers">Package managers</h3>
+
+<p>Install with npm: <code>npm install flickity</code></p>
+
+<p>Install with Bower: <code>bower install flickity --save</code></p>
+
+
+<h2 id="license">License</h2>
+
+
+<h3 id="commercial-license">Commercial license</h3>
+
+<p>If you want to use Flickity to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. <a href="license.html">Read more about Flickity commercial licensing</a>.</p>
+
+<p>Once purchased, you’ll receive a commercial license PDF and be all set to use Flickity in your commercial applications.</p>
+
+<div class="buy-button-trio">
+    <a class="buy-button" href="https://gum.co/flickity-dev">
+      <span class="buy-button__project">Flickity Commercial</span>
+      <span class="buy-button__title">Developer</span>
+      <span class="buy-button__license">License</span>
+      <span class="buy-button__for">for 1 developer</span>
+      <span class="buy-button__price">
+        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">25</span>
+      </span>
+    </a>
+
+    <a class="buy-button" href="https://gum.co/flickity-team">
+      <span class="buy-button__project">Flickity Commercial</span>
+      <span class="buy-button__title">Team</span>
+      <span class="buy-button__license">License</span>
+      <span class="buy-button__for">for up to 8 developers</span>
+      <span class="buy-button__price">
+        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">110</span>
+      </span>
+    </a>
+
+    <a class="buy-button" href="https://gum.co/flickity-org">
+      <span class="buy-button__project">Flickity Commercial</span>
+      <span class="buy-button__title">Organization</span>
+      <span class="buy-button__license">License</span>
+      <span class="buy-button__for">for Unlimited developers</span>
+      <span class="buy-button__price">
+        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">320</span>
+      </span>
+    </a>
+</div>
+
+
+<h3 id="open-source-license">Open source license</h3>
+
+<p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Flickity under the terms of the GPLv3. <a href="license.html">Read more about Flickity open source licensing</a>.</p>
+
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>Include the Flickity <code>.css</code> and <code>.js</code> files in your site.</p>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/path/to/flickity.css"</span> <span class="attr">media</span>=<span class="string">"screen"</span>&gt;</span>
+</code></pre>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/path/to/flickity.pkgd.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+</code></pre>
+
+<p>Flickity works on a container carousel element with a group of cell elements.</p>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main-carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+
+<p>There are several ways to initialize Flickity.</p>
+
+
+<h3 id="initialize-with-jquery">Initialize with jQuery</h3>
+
+<p>You can use Flickity as a jQuery plugin: <code>$(<span class="string">'selector'</span>).flickity()</code>.</p>
+<pre><code class=" js
+">$(<span class="string">'.main-carousel'</span>).flickity({
+  <span class="comment">// options</span>
+  <span class="attr">cellAlign</span>: <span class="string">'left'</span>,
+  <span class="attr">contain</span>: <span class="literal">true</span>
+});
+</code></pre>
+
+
+<h3 id="initialize-with-vanilla-javascript">Initialize with vanilla JavaScript</h3>
+
+<p>You can use Flickity with vanilla JS: <code><span class="keyword">new</span> Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the carousel element and an options object.</p>
+<pre><code class=" js
+"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">'.main-carousel'</span>);
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity_keyword">Flickity</span>( elem, {
+  <span class="comment">// options</span>
+  <span class="attr">cellAlign</span>: <span class="string">'left'</span>,
+  <span class="attr">contain</span>: <span class="literal">true</span>
+});
+
+<span class="comment">// element argument can be a selector string</span>
+<span class="comment">//   for an individual element</span>
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity_keyword">Flickity</span>( <span class="string">'.main-carousel'</span>, {
+  <span class="comment">// options</span>
+});
+</code></pre>
+
+
+<h3 id="initialize-with-html">Initialize with HTML</h3>
+
+<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>data-flickity</code> attribute to the carousel element. <a href="options.html">Options</a> can be set in its value.</p>
+
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main-carousel"</span> <span class="attr">data-flickity</span>=<span class="string">'{ "cellAlign": "left", "contain": true }'</span>&gt;</span>
+</code></pre>
+
+<div class="call-out">
+  <p>Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"cellAlign":</code>. Note that the attribute value uses single quotes <code>'</code>, but the JSON entities use double-quotes <code>"</code>.</p>
+</div>
+
+
+<h3 id="next">Next</h3>
+
+<ul>
+  <li><a href="style.html">Style</a></li>
+  <li><a href="options.html">Options</a></li>
+  <li><a href="api.html">API</a></li>
+</ul>
+
+
+<h2 id="feature-showcase">Feature showcase</h2>
+
+
+<div class="duo">
+  <div class="duo__cell">
+    <h3 id="wraparound"><a href="options.html#wraparound">wrapAround</a></h3>
+    <div class="carousel" data-flickity="{ &quot;wrapAround&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/myXdej">Edit this demo on CodePen</a>
+    </p>
+    <p>Wrap-around the end back to the beginning for infinite scrolling.</p>
+  </div>
+  <div class="duo__cell">
+    <h3 id="freescroll"><a href="options.html#freescroll">freeScroll</a></h3>
+    <div class="carousel" data-flickity="{ &quot;freeScroll&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/bNLGNZ">Edit this demo on CodePen</a>
+    </p>
+    <p>Freely flick and scroll content without alignment.</p>
+  </div>
+</div>
+
+<div class="duo">
+  <div class="duo__cell">
+    <h3 id="groupcells"><a href="options.html#groupcells">groupCells</a></h3>
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity="{ &quot;groupCells&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/XKZXyv">Edit this demo on CodePen</a>
+    </p>
+    <p>Groups cells together to act as individual slides.</p>
+  </div>
+  <div class="duo__cell">
+    <h3 id="autoplay"><a href="options.html#autoplay">autoPlay</a></h3>
+    <div class="carousel" data-flickity="{ &quot;autoPlay&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/RNQwaB">Edit this demo on CodePen</a>
+    </p>
+    <p>Automatically advance to the next cell.</p>
+  </div>
+</div>
+
+<div class="duo">
+  <div class="duo__cell">
+    <h3 id="lazyload"><a href="options.html#lazyload">lazyLoad</a></h3>
+    <div class="carousel carousel--lazyload-cells carousel--not-counting" data-flickity="{ &quot;lazyLoad&quot;: true }">
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van">
+      </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/vOeGzL">Edit this demo on CodePen</a>
+    </p>
+    <p>Load cell images when selected.</p>
+  </div>
+  <div class="example__demo duo__cell" data-js="keyhole">
+    <h3 id="parallax"><a href="events.html#scroll">Parallax</a></h3>
+    <div class="carousel">
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/bwy74ok.jpg" alt="orange tree">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/aboaFoB.jpg" alt="freedom tower">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/LkmcILl.jpg" alt="drizzle">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/q9zO6tw.jpg" alt="cat nose">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/r8p3Xgq.jpg" alt="contrail">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/hODreXI.jpg" alt="sunset">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/UORFJ3w.jpg" alt="planes">
+      </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/jAGWRQ">Edit this demo</a>
+        or <a href="https://codepen.io/desandro/pen/qNPbgb">vanilla JS demo</a> on CodePen
+    </p>
+    <p>Parallax effects on scroll event.</p>
+  </div>
+</div>
+
+<h3 id="images">Images</h3>
+
+<p>Flickity makes beautiful image galleries.</p>
+
+<div class="example">
+  <div class="example__demo">
+    <div class="carousel carousel--images-demo" data-flickity="{ &quot;imagesLoaded&quot;: true, &quot;percentPosition&quot;: false }">
+      <!-- images from unsplash.com -->
+      <img src="https://i.imgur.com/bwy74ok.jpg" alt="orange tree">
+      <img src="https://i.imgur.com/bAZWoqx.jpg" alt="submerged">
+      <img src="https://i.imgur.com/PgmEBSB.jpg" alt="look-out">
+      <img src="https://i.imgur.com/aboaFoB.jpg" alt="freedom tower">
+      <img src="https://i.imgur.com/LkmcILl.jpg" alt="drizzle">
+      <img src="https://i.imgur.com/q9zO6tw.jpg" alt="cat nose">
+      <img src="https://i.imgur.com/r8p3Xgq.jpg" alt="contrail">
+      <img src="https://i.imgur.com/hODreXI.jpg" alt="sunset">
+      <img src="https://i.imgur.com/UORFJ3w.jpg" alt="formation">
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/GgQREP">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="view-all-options"><a href="options.html">View all options</a></h3>
+
+
+<h2 id="flickity-in-use">Flickity in use</h2>
+
+<p>We’d love to see how you use Flickity! Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
+
+<div class="in-use-carousel" data-flickity="{ &quot;lazyLoad&quot;: 1, &quot;wrapAround&quot;: true, &quot;groupCells&quot;: true }">
+    <a class="in-use-carousel__item" href="https://www.riotgames.com/en">
+      <p class="in-use-carousel__item__title">Riot Games</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/lxdGu60.jpg" alt="Riot Games">
+    </a>
+    <a class="in-use-carousel__item" href="http://www.janegoodall.org.nz/">
+      <p class="in-use-carousel__item__title">The Jane Goodall Institute New Zealand</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/ndBOIk4.jpg" alt="The Jane Goodall Institute New Zealand">
+    </a>
+    <a class="in-use-carousel__item" href="https://cottonbureau.com/products/fizzy-bear">
+      <p class="in-use-carousel__item__title">Cotton Bureau</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/jGFnPzd.jpg" alt="Cotton Bureau">
+    </a>
+    <a class="in-use-carousel__item" href="https://www.sxsw.com">
+      <p class="in-use-carousel__item__title">SXSW Conference</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/l8hfIml.jpg" alt="SXSW Conference">
+    </a>
+    <a class="in-use-carousel__item" href="http://www.engadget.com/2016/01/05/canon-new-powershot-vixia-cameras">
+      <p class="in-use-carousel__item__title">Engadget</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/qkXOEOj.jpg" alt="Engadget">
+    </a>
+    <a class="in-use-carousel__item" href="https://unlocked.ch">
+      <p class="in-use-carousel__item__title">unlocked</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/Y8bQw1t.jpg" alt="unlocked">
+    </a>
+    <a class="in-use-carousel__item" href="https://www.customink.com/products/styles/next-level-tri-blend-t-shirt/186900">
+      <p class="in-use-carousel__item__title">CustomInk</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/qz1Q91n.jpg" alt="CustomInk">
+    </a>
+    <a class="in-use-carousel__item" href="https://www.artsy.net/show/maison-gerard-maison-gerard-and-the-indianapolis-museum-of-art-celebrate-ayala-serfaty">
+      <p class="in-use-carousel__item__title">Artsy</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/yKhaKAp.jpg" alt="Artsy">
+    </a>
+    <a class="in-use-carousel__item" href="http://tympanus.net/Development/PhotographyWebsiteConcept/">
+      <p class="in-use-carousel__item__title">Codrops Photography Website Concept</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/KwkBANB.jpg" alt="Codrops Photography Website Concept">
+    </a>
+    <a class="in-use-carousel__item" href="http://district-theme-demo.myshopify.com/">
+      <p class="in-use-carousel__item__title">District Shopify theme</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/msauCzq.jpg" alt="District Shopify theme">
+    </a>
+    <a class="in-use-carousel__item" href="http://tonyhornecker.com/work/homes-project/the-palafito.php">
+      <p class="in-use-carousel__item__title">Tony Hornecker</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/ZevmGsl.jpg" alt="Tony Hornecker">
+    </a>
+    <a class="in-use-carousel__item" href="http://www.rookiemag.com/">
+      <p class="in-use-carousel__item__title">Rookie</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="https://i.imgur.com/dkTEqLp.jpg" alt="Rookie">
+    </a>
+</div>
+
+
+
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <p class="site-footer__copy">Metafizzy makes delightful web plugins &amp; logos</p>
+
+    <div class="showcase">
+    
+      <ul class="showcase-item-list">
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://isotope.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="isotope-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" width="100" height="100">
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 170H30c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 166 86 170 80 170z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 90H30c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 86 86 90 80 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M160 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C170 86 166 90 160 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M240 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C250 86 246 90 240 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M320 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C330 86 326 90 320 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M155 165h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C165 161 161 165 155 165z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M230 160h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C240 156 236 160 230 160z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M305 155h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 151 311 155 305 155z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M65 235H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 231 71 235 65 235z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M140 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C150 226 146 230 140 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M305 235h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 231 311 235 305 235z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M65 315H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 311 71 315 65 315z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M150 320h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C160 316 156 320 150 320z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M220 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C230 226 226 230 220 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M235 325h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C245 321 241 325 235 325z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M320 330h-50c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50 C330 326 326 330 320 330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Isotope</h3>
+                <p class="showcase-item__description">Filter &amp; sort magical layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://infinite-scroll.com">
+              <div class="showcase-item__image">
+                  <svg class="infinite-scroll-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="200" height="200">
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M90,110H10V90c0-22,18-40,40-40h40V110z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front1" d="M270,90L270,90c0-22-18-40-40-40h0H50h0c22,0,40,18,40,40v0v0v160h180V90z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M170,330v-20H90v20v0c0,22,18,40,40,40h0h40V330z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M350,150H210c-22,0-40,18-40,40v140v0c0,22-18,40-40,40h0h220V150z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front3" d="M430,470V270H250v160c0,22,18,40,40,40H430z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M250,190v20h180v-20c0-22-18-40-40-40H210h0C232,150,250,168,250,190L250,190z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M330,410v20v0c0,22-18,40-40,40h0h180c22,0,40-18,40-40v-20H330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Infinite Scroll</h3>
+                <p class="showcase-item__description">Automatically add next page</p>
+              </div>
+            </a>
+          </li>
+    
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://packery.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="packery-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="packery-illo__item" fill="#C09" d="M172 180H48c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 176 176 180 172 180z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M172 340H48c-4 0-8-4-8-8V208c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 336 176 340 172 340z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M492 660H368c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C500 656 496 660 492 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 660H528c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C660 656 656 660 652 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 500H368c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v124C660 496 656 500 652 500z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M332 660H48c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v284C340 656 336 660 332 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 340H528c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v284C660 336 656 340 652 340z"></path>
+                    <path class="packery-illo__draggie" fill="#EA0" d="M572 440H288c-4 0-8-4-8-8V148c0-4 4-8 8-8h284c4 0 8 4 8 8v284C580 436 576 440 572 440z"></path>
+                    <g>
+                      <path class="packery-illo__hand" fill="white" d="M530 250c-11 0-20 9-20 20v-10c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20
+                        s-20 9-20 20v20c-17 0-30 13-30 30c0 11 6 20 14 25l19 35c10 18 30 30 51 30h28
+                        c43 0 78-35 78-78V270C550 259 541 250 530 250z"></path>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="430" y1="300" x2="430" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="470" y1="300" x2="470" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="510" y1="300" x2="510" y2="340"></line>
+                    </g>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Packery</h3>
+                <p class="showcase-item__description">Gapless, draggable grid layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://logo.pizza">
+              <div class="showcase-item__image">
+                  <svg class="logo-pizza-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="logo-pizza-illo__outline" fill="#C25" d="M513 91c-9-0-17 5-21 12l-80 160c-3 5-6 10-11 15l-47 47
+                      c-5 5-12-1-9-7l32-64c5-11-2-23-14-23h-0c-121 0-268 70-327 180
+                      C-9 497 35 609 196 609c138 0 279-85 327-180v0c5-11-2-23-14-23h-77c-13 0-19-15-10-24
+                      l81-81c5-5 11-8 18-8l0 0c13 0 19 15 10 24L494 354c-6 6-6 14 0 20c3 3 6 4 10 4
+                      c4 0 7-1 10-4l80-80h53c9 0 17-5 21-13C707 190 656 97 513 91z M334 281l-59 117
+                      c-2 5-7 8-13 8H97c-4 0-6-4-3-7c49-64 143-114 236-124C333 275 335 278 334 281z
+                       M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z M446 318l-81 81c-5 5-11 8-18 8l0 0
+                      c-13 0-19-15-10-24l81-81c5-5 11-8 18-8l0 0C449 294 455 309 446 318z M447 258L506 139
+                      c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452C448 266 445 262 447 258z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M334 281l-59 117c-2 5-7 8-13 8H97c-4 0-6-4-3-7
+                      c49-64 143-114 236-124C333 275 335 278 334 281z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M447 258L506 139c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452
+                      C448 266 445 262 447 258z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Logo Pizza</h3>
+                <p class="showcase-item__description">Hot &amp; ready logos for sale</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://fizzy.school">
+              <div class="showcase-item__image">
+                  <svg class="witchie-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="200" height="200">
+                    <circle class="witchie-logo__moon" fill="white" cx="500" cy="500" r="500"></circle>
+                    <path class="witchie-logo__broom" fill="#EA0" d="M582 675a35 35 0 0 0 8-20 3 3 0 0 1 3-2h71a3 3 0 0 1 3 3 59 59 0 0 0 0 20 3 3 0 0 1-3 3h-79A3 3 0 0 1 582 675Zm219 4a13 13 0 0 0 13-14c-1-7-7-12-14-12h-44a3 3 0 0 0-3 3v21a3 3 0 0 0 3 3ZM299 660a203 203 0 0 1-27-36 8 8 0 0 0-4-3L178 582a13 13 0 0 0-18 12v77a8 8 0 0 0 8 8h22a5 5 0 0 1 2 10L164 703a8 8 0 0 0-4 7v28a13 13 0 0 0 18 12l146-63a3 3 0 0 0 1-5A197 197 0 0 1 299 660Z"></path>
+                    <path class="witchie-logo__dress" fill="#333" d="M326 705h4a13 13 0 0 1 13 13v8a13 13 0 0 0 4 9l13 13a13 13 0 0 1 0 19l-56 56c-10 10-26-0-22-13L314 714A13 13 0 0 1 326 705Zm397-79c-27 0-47 26-37 54 3 7 11 16 17 19a42 42 0 0 0 19 5 38 38 0 0 0 7-1 8 8 0 0 0 6-8v-62a8 8 0 0 0-6-8 38 38 0 0 0-7-1M840 397c-3-15-33-23-77-23a521 521 0 0 0-59 4 5 5 0 0 1-5-2L567 177a8 8 0 0 0-7-4 8 8 0 0 0-8 8l1 227a5 5 0 0 1-4 5c-74 24-123 55-119 76 2 8 11 14 26 18a3 3 0 0 1 1 4l-11 11c-20 20-56 30-92 30-31 0-63-8-84-23a5 5 0 0 0-3-1 5 5 0 0 0-5 5c0 78 68 173 183 173h75a10 10 0 0 0 7-3l38-38a16 16 0 0 0 0-23l-34-34a10 10 0 0 1 0-14l15-15a3 3 0 0 1 5 2v15a5 5 0 0 0 5 5H674a4 4 0 0 0 3-7l-90-90a3 3 0 0 1 1-4c34-19 59-49 67-84a3 3 0 0 1 2-2c6-1 12-1 17-1 22 0 37 5 39 14 1 6 3 11 2 17-5 17 1 31 8 31a6 6 0 0 0 2-0C797 448 845 419 840 397Z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Fizzy School</h3>
+                <p class="showcase-item__description">Lessons in JavaScript for jQuery newbies</p>
+              </div>
+            </a>
+          </li>
+    
+      </ul> 
+    
+    </div>
+
+    <p class="site-footer__copy">
+      <a href="https://twitter.com/metafizzyco">
+        <svg class="twitter-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+          <path d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z"></path>
+        </svg>
+        Follow @metafizzyco on Twitter for Flickity updates
+      </a>
+    </p>
+
+    <div class="mfzy-brand">
+      <a class="mfzy-brand__link" href="https://metafizzy.co">
+        <svg class="mfzy-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 144 144" width="36" height="36">
+          <title>Metafizzy logo</title>
+          <defs>
+            <path id="mfzy-logo__body" d="M 120 24 a 12 12 0 0 0-24 0 a 72 72 0 0 1 -1 11
+              a 40 40 0 0 0 -13 -8.5 A 12 12 0 1 0 61.1 25.1 c -8 2 -14 6 -19.6 11.6 
+              A 12 12 0 1 0 35.3 55.5 L 45.8 72.1 l -16 9.6 A 12 12 0 0 0 42.2 102.3
+              L 58 92.8 a 20 20 0 0 1 -0.2 11.9 l -5.2 15.5 a 12 12 0 0 0 22.8 7.6
+              l 1.1 -3.3 l 23.7 -14.2 a 12 12 0 0 0 5.2 -6.5 l 4 -12 A 50 50 0 0 0 111.9 76
+              a 52 52 0 0 0 -1.6 -12.8 C 115 57 120 44 120 24Z"></path>
+            <path id="mfzy-logo__eye" d="M 0 6.5 a 6.5 6.5 0 0 1 13 0 c 0 3.5 -3 0.5 -6.5 0.5 s -6.5 3 -6.5 -0.5 Z"></path>
+            <clipPath id="mfzy-logo__body-clip">
+              <use xlink:href="#mfzy-logo__body"></use>
+            </clipPath>
+          </defs>
+          <use class="mfzy-logo__body-outline" xlink:href="#mfzy-logo__body" fill="#333" stroke="#333" stroke-width="16"></use>
+          <use class="mfzy-logo__body-fill" xlink:href="#mfzy-logo__body"></use>
+          <g class="mfzy-logo__stripes" clip-path="url(#mfzy-logo__body-clip)">
+            <rect fill="#E62" x="16" width="120" height="138"></rect>
+            <path fill="#C25" d="M96 24L16 72V0h80v24z"></path>
+            <path fill="#EA0" d="M116 70L16 130v-26l95-57 5 23z"></path>
+            <path fill="#19F" d="M136 138H16v-8l120-72v80z"></path>
+          </g>
+          <path class="mfzy-logo__cut-ins" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" d="M 72 20.4 c 23 0 44 29 44 56
+            M 54 103.4 a 16 16 0 0 0 0 -10
+            M 96 98 c -2 2 -8 6 -8.5,6 l -8.4 25.1"></path>
+          <g transform="translate(53 57) rotate(-31)">
+            <ellipse class="mfzy-logo__snout" cx="25" cy="21" rx="14" ry="9" fill="#FFF"></ellipse>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333"></use>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333" transform="translate(29 0)"></use>
+            <path class="mfzy-logo__feature" d="M 28.6 14 a 3 3 0 0 1 1.3 5.6 l -2.6 1.2 a 3 3 0 0 1 -2.6 0
+              l -2.6 -1.2 a 3 3 0 0 1 1.3 -5.6 Z" fill="#333"></path>
+          </g>
+        </svg>
+        <svg class="mfzy-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none" stroke="#333" width="140" height="40">
+          <g transform="skewX(-18)">
+            <path stroke-width="8" d="M38 20h6c4 0 7 2 9 6l9 18l12-24h2v22
+            a20 22 0 0 0 20 22M48 22v28a12 15 0 0 1-24 0M98 44a6 6 0 0 0 0-12h-2
+            a8 10 0 0 0 0 20h14a8 10 0 0 0 8-10M118 12v30a8 10 0 0 0 16 0M150 36
+            q-4-4-8-4a8 10 0 1 0 8 10m0-14v14a8 10 0 0 0 8 10M184 20a9 9 0 0 0-18 0
+            v34a8 10 0 0 1-8 10M158 32h24v24M190 32h18l-12 20h18M216 32h18l-12 20h18
+            a8 10 0 0 0 8-10m0-14v14a8 10 0 0 0 16 0m0-14v38a6 6 0 0 1-12 0
+            c0-12 32-8 32-32c0-10-6-16-15-16M108 24h24a6 6 0 0 0 6-6M102 38h-4"></path>
+            <g stroke-width="6">
+              <circle cx="38" cy="22" r="3"></circle>
+              <circle cx="182" cy="20" r="3"></circle>
+              <circle cx="269" cy="20" r="3"></circle>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="js/flickity-docs.min.js?2"></script>
+
+
+
+
+</body></html>

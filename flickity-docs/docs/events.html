@@ -1,0 +1,1024 @@
+<!DOCTYPE html><html lang="en" class="export"><head>
+  <meta charset="utf-8">
+  <meta name="description" content="Touch, responsive, flickable carousels">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Flickity v2 · Events</title>
+
+    <link rel="stylesheet" href="css/flickity-docs.css?6" media="screen">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@metafizzyco">
+  <meta name="twitter:url" content="https://flickity.metafizzy.co/events.html">
+  <meta name="twitter:title" content="Flickity Events">
+  <meta name="twitter:description" content="Touch, responsive, flickable carousels">
+
+</head>
+<body class="page--events">
+
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="main">
+  <div class="container">
+      <h1 class="page-title">Events</h1>
+
+
+    <ul class="page-nav" data-js="page-nav">
+<li class="page-nav__item page-nav__item--h2">
+        <a href="#event-binding">Event binding</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#jquery-event-binding">jQuery event binding</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#vanilla-js-event-binding">Vanilla JS event binding</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#on-option">on option</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#events-demo">Events demo</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#flickity-events">Flickity events</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#ready">ready</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#change">change</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#select">select</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#settle">settle</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#scroll">scroll</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#dragstart">dragStart</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#dragmove">dragMove</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#dragend">dragEnd</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#pointerdown">pointerDown</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#pointermove">pointerMove</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#pointerup">pointerUp</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#staticclick">staticClick</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#lazyload">lazyLoad</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#bglazyload">bgLazyLoad</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#fullscreenchange">fullscreenChange</a>
+      </li></ul>
+
+
+
+<h2 id="event-binding">Event binding</h2>
+
+
+<h3 id="jquery-event-binding">jQuery event binding</h3>
+
+<p>Bind events with jQuery with standard jQuery event methods <code>.on()</code>, <code>.off()</code>, and <code>.one()</code>. Event names are namespaced with <code>.flickity</code>.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+<span class="function"><span class="keyword">function</span> <span class="title">listener</span>(<span class="params"><span class="comment">/* parameters */</span></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'eventName happened'</span>);
+}
+<span class="comment">// bind event listener</span>
+$carousel.on( <span class="string">'eventName.flickity'</span>, listener );
+<span class="comment">// unbind event listener</span>
+$carousel.off( <span class="string">'eventName.flickity'</span>, listener );
+<span class="comment">// bind event listener to trigger once. note ONE not ON</span>
+$carousel.one( <span class="string">'eventName.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'eventName happened just once'</span>);
+});
+</code></pre>
+
+
+<h3 id="vanilla-js-event-binding">Vanilla JS event binding</h3>
+
+<p>Bind events with vanilla JS with <code>.on()</code>, <code>.off()</code>, and <code>.once()</code> methods.</p>
+<pre><code class=" js
+"><span class="comment">// vanilla JS</span>
+<span class="function"><span class="keyword">function</span> <span class="title">listener</span>(<span class="params"><span class="comment">/* parameters */</span></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'eventName happened'</span>);
+}
+<span class="comment">// bind event listener</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'eventName'</span>, listener );
+<span class="comment">// unbind event listener</span>
+<span class="flickity_var">flkty</span>.off( <span class="string">'eventName'</span>, listener );
+<span class="comment">// bind event listener to trigger once. note ONCE not ONE or ON</span>
+<span class="flickity_var">flkty</span>.once( <span class="string">'eventName'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'eventName happened just once'</span>);
+});
+</code></pre>
+
+
+<h3 id="on-option">on option</h3>
+
+<p>Bind events within Flickity's options by setting <code>on</code> to an <i>Object</i>. The object's keys should match the event names. <code>on</code> is useful for capturing events as Flickity is initialized, like <a href="#ready"><code>ready</code></a></p> 
+
+<div class="duo">
+  <div class="duo__cell"><pre><code class=" js
+"><span class="comment">// jQuery</span>
+<span class="keyword">var</span> $carousel = $(<span class="string">'.carousel'</span>).flickity({
+  <span class="attr">on</span>: {
+    <span class="attr">ready</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      <span class="built_in">console</span>.log(<span class="string">'Flickity is ready'</span>);
+    },
+    <span class="attr">change</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> index </span>) </span>{
+      <span class="built_in">console</span>.log( <span class="string">'Slide changed to'</span> + index );
+    }
+  }
+});
+</code></pre>
+    <p>When using <code>on</code> with jQuery, event listener functions will use their vanilla JS form, and not include the jQuery <code>event</code> argument.</p>
+  </div>
+  <div class="duo__cell"><pre><code class=" js
+"><span class="comment">// vanilla JS</span>
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity_keyword">Flickity</span>( <span class="string">'.carousel'</span>, {
+  <span class="attr">on</span>: {
+    <span class="attr">ready</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      <span class="built_in">console</span>.log(<span class="string">'Flickity is ready'</span>);
+    },
+    <span class="attr">change</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> index </span>) </span>{
+      <span class="built_in">console</span>.log( <span class="string">'Slide changed to'</span> + index );
+    }
+  }
+});
+</code></pre>
+  </div>
+</div>
+
+
+
+
+<h2 id="events-demo">Events demo</h2>
+
+<p>Play around with this carousel to see how events are triggered.</p>
+
+<div class="example duo" data-js="events-table">
+  <div class="example__demo duo__cell">
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+  <div class="duo__cell">
+    <table class="event-table">
+      <tbody><tr>
+        <th class="event-table__time">Time</th>
+        <th class="event-table__event">Event</th>
+        <th class="event-table__message"></th>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+<h2 id="flickity-events">Flickity events</h2>
+
+
+<h3 id="ready">ready</h3>
+
+<p>Triggered after Flickity has been activated.</p><p>
+
+</p><p>With jQuery, bind event listener first, then initialize Flickity.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+<span class="keyword">var</span> $carousel = $(<span class="string">'.carousel'</span>);
+<span class="comment">// bind event listener first</span>
+$carousel.on( <span class="string">'ready.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'Flickity ready'</span>);
+});
+<span class="comment">// initialize Flickity</span>
+$carousel.flickity();
+</code></pre>
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/NYROXK">Edit this demo on CodePen</a>
+</p>
+
+<p>With vanilla JS, bind listener with the <a href="#on-option"><code>on</code> option</a>, as the <code>ready</code> event may be triggered immediately.</p>
+<pre><code class=" js
+"><span class="comment">// vanilla JS</span>
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = <span class="keyword">new</span> <span class="flickity_keyword">Flickity</span>( <span class="string">'.carousel'</span>, {
+  <span class="attr">on</span>: {
+    <span class="attr">ready</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      <span class="built_in">console</span>.log(<span class="string">'Flickity ready'</span>);
+    }
+  }
+});
+</code></pre>
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/qoaJVp">Edit this demo on CodePen</a>
+</p>
+
+
+<h3 id="change">change</h3>
+
+<p>Triggered when the selected slide is changed.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'change.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, index </span>) </span>{
+  <span class="built_in">console</span>.log( <span class="string">'Slide changed to '</span> + index )
+});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'change'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> index </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/bvwxyO">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/ZxpMdY">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="select">select</h3>
+
+<p>Triggered when a slide is selected.</p>
+
+<p><code>select</code> is triggered any time a slide is selected, even on the same slide. <code>change</code> is triggered only when a different slide is selected.</p>
+
+<p>This event was previously <code>cellSelect</code> in Flickity v1. <code>cellSelect</code> will continue to work in Flickity v2.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'select.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, index </span>) </span>{
+  <span class="built_in">console</span>.log( <span class="string">'Flickity select '</span> + index )
+});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'select'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> index </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/emVgqE">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/ogEwXe">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="settle">settle</h3>
+
+<p>Triggered when the slider is settled at its end position.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'settle.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, index </span>) </span>{
+  <span class="built_in">console</span>.log( <span class="string">'Flickity settled at '</span> + index );
+});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'settle'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> index </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/yyvXYL">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/myXweK">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="scroll">scroll</h3>
+
+<p>Triggered when the slider moves.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'scroll.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, progress </span>) </span>{
+  <span class="built_in">console</span>.log( <span class="string">'Flickity scrolled '</span> + progress * <span class="number">100</span> + <span class="string">'%'</span> )
+});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> progress </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">progress</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">How far slider has moved, from <code>0</code> at the first slide to <code>1</code> at the end</span>
+</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">$carousel.on( <span class="string">'scroll.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, progress </span>) </span>{
+  progress = <span class="built_in">Math</span>.max( <span class="number">0</span>, <span class="built_in">Math</span>.min( <span class="number">1</span>, progress ) );
+  $progressBar.width( progress * <span class="number">100</span> + <span class="string">'%'</span> );
+});
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell" data-js="progress-bar">
+    <div class="carousel carousel--progress-bar">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <div class="progress-bar__bar"></div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/grGWbo">Edit this demo</a>
+        or <a href="https://codepen.io/desandro/pen/obpVGa">vanilla JS demo</a> on CodePen
+    </p>
+  </div>
+</div>
+
+<p>Use <code>scroll</code> to create parallax effects.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+"><span class="keyword">var</span> <span class="flickity_var">flkty</span> = $carousel.data(<span class="string">'flickity'</span>);
+<span class="keyword">var</span> $imgs = $(<span class="string">'.carousel-cell img'</span>);
+
+$carousel.on( <span class="string">'scroll.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, progress </span>) </span>{
+  <span class="flickity_var">flkty</span>.slides.forEach( <span class="function"><span class="keyword">function</span>(<span class="params"> slide, i </span>) </span>{
+    <span class="keyword">var</span> img = $imgs[i];
+    <span class="keyword">var</span> x = ( slide.target + <span class="flickity_var">flkty</span>.x ) * -<span class="number">1</span>/<span class="number">3</span>;
+    img.style.transform = <span class="string">'translateX( '</span> + x  + <span class="string">'px)'</span>;
+  });
+});
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell" data-js="keyhole">
+    <div class="carousel">
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/bwy74ok.jpg" alt="orange tree">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/aboaFoB.jpg" alt="freedom tower">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/LkmcILl.jpg" alt="drizzle">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/q9zO6tw.jpg" alt="cat nose">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/r8p3Xgq.jpg" alt="contrail">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/hODreXI.jpg" alt="sunset">
+      </div>
+      <div class="keyhole-cell">
+        <img src="https://i.imgur.com/UORFJ3w.jpg" alt="planes">
+      </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/jAGWRQ">Edit this demo</a>
+        or <a href="https://codepen.io/desandro/pen/qNPbgb">vanilla JS demo</a> on CodePen
+    </p>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code"><pre><code class=" js
+"><span class="keyword">var</span> cellRatio = <span class="number">0.6</span>; <span class="comment">// outerWidth of cell / width of carousel</span>
+<span class="keyword">var</span> bgRatio = <span class="number">0.8</span>; <span class="comment">// width of background layer / width of carousel</span>
+<span class="keyword">var</span> fgRatio = <span class="number">1.25</span>; <span class="comment">// width of foreground layer / width of carousel</span>
+
+$carousel.on( <span class="string">'scroll.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, progress </span>) </span>{
+  moveParallaxLayer( $background, bgRatio, progress );
+  moveParallaxLayer( $foreground, fgRatio, progress );
+});
+<span class="comment">// trigger initial scroll</span>
+$carousel.flickity(<span class="string">'reposition'</span>);
+
+<span class="keyword">var</span> <span class="flickity_var">flkty</span> = $carousel.data(<span class="string">'flickity'</span>);
+<span class="keyword">var</span> count = <span class="flickity_var">flkty</span>.slides.length - <span class="number">1</span>;
+
+<span class="function"><span class="keyword">function</span> <span class="title">moveParallaxLayer</span>(<span class="params"> $layer, layerRatio, progress </span>) </span>{
+  <span class="keyword">var</span> ratio = cellRatio * layerRatio;
+  $layer.css({
+    <span class="attr">left</span>: ( <span class="number">0.5</span> - ( <span class="number">0.5</span> + progress * count ) * ratio ) * <span class="number">100</span> + <span class="string">'%'</span>
+  });
+}
+</code></pre>
+  </div>
+  <div class="example__demo">
+    <div class="parallax" data-js="parallax">
+      <!-- background parallax layer -->
+      <div class="parallax__layer parallax__layer--bg">
+        <div class="parallax__layer__cell parallax__layer__cell--bg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--bg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--bg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--bg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--bg"></div>
+      </div>
+      <!-- carousel: midground parallax layer -->
+      <div class="carousel carousel--parallax">
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div>
+      <!-- foreground parallax layer -->
+      <div class="parallax__layer parallax__layer--fg">
+        <div class="parallax__layer__cell parallax__layer__cell--fg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--fg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--fg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--fg"></div>
+        <div class="parallax__layer__cell parallax__layer__cell--fg"></div>
+      </div>
+    </div>
+    
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/JKANYK">Edit this demo</a>
+        or <a href="https://codepen.io/desandro/pen/oLGWLk">vanilla JS demo</a> on CodePen
+    </p>
+  </div>
+</div>
+
+
+<h3 id="dragstart">dragStart</h3>
+
+<p>Triggered when dragging starts and the slider starts moving.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'dragStart.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'dragStart'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/KwQqWw">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/RNQgpB">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="dragmove">dragMove</h3>
+
+<p>Triggered when dragging moves and the slider moves.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'dragMove.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, moveVector </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'dragMove'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, moveVector </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">moveVector</span></code>
+  <span class="argument__type"><i>Object</i></span>
+  <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/azqwWW">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/YPeQVL">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="dragend">dragEnd</h3>
+
+<p>Triggered when dragging ends.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'dragEnd.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'dragEnd'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/ByYZRb">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/jEZwwO">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="pointerdown">pointerDown</h3>
+
+<p>Triggered when the user's pointer (mouse, touch, pointer) presses down.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'pointerDown.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'pointerDown'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/zxRzzZ">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/ByYZZE">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="pointermove">pointerMove</h3>
+
+<p>Triggered when the user's pointer moves.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'pointerMove.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, moveVector </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'pointerMove'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, moveVector </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">moveVector</span></code>
+  <span class="argument__type"><i>Object</i></span>
+  <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/XJZgap">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/JoLZMP">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="pointerup">pointerUp</h3>
+
+<p>Triggered when the user's pointer unpresses.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'pointerUp.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'pointerUp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/qExjXV">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/pvawrj">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="staticclick">staticClick</h3>
+
+<p>Triggered when the user's pointer is pressed and unpressed and has not moved enough to start dragging.</p>
+
+<p><code>click</code> events are hard to detect with draggable UI, as they are triggered whenever a user drags. Flickity's <code>staticClick</code> event resolves this, as it is triggered when the user has not dragged.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'staticClick.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, cellElement, cellIndex </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'staticClick'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, cellElement, cellIndex </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">pointer</span></code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellElement</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">If a cell was clicked, the element.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellIndex</span></code>
+  <span class="argument__type"><i>Integer</i></span>
+  <span class="argument__description">If a cell was clicked, the cell’s zero-based number.</span>
+</p>
+
+<p>Use the <code><span class="params">cellElement</span></code> and <code><span class="params">cellIndex</span></code> parameters to detect what cell was clicked.</p>
+
+<div class="example">
+  <div class="example__code"><pre><code class=" js
+">$carousel.on( <span class="string">'staticClick.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, pointer, cellElement, cellIndex </span>) </span>{
+  <span class="comment">// dismiss if cell was not clicked</span>
+  <span class="keyword">if</span> ( !cellElement ) {
+    <span class="keyword">return</span>;
+  }
+  <span class="comment">// change cell background with .is-clicked</span>
+  $carousel.find(<span class="string">'.is-clicked'</span>).removeClass(<span class="string">'is-clicked'</span>);
+  $( cellElement ).addClass(<span class="string">'is-clicked'</span>);
+  $logger.text( <span class="string">'Cell '</span> + ( cellIndex + <span class="number">1</span> )  + <span class="string">' clicked'</span> );
+});
+</code></pre>
+  </div>
+  <div class="example__demo" data-js="static-click">
+    <p class="example__demo__instruction">Click cells</p>
+    <div class="carousel carousel--static-click">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="logger">&nbsp;</p>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/XJZgzM">Edit this demo</a>
+        or <a href="https://codepen.io/desandro/pen/RNQgxe">vanilla JS demo</a> on CodePen
+    </p>
+  </div>
+</div>
+
+
+<h3 id="lazyload">lazyLoad</h3>
+
+<p>Triggered after an image has been loaded with <a href="options.html#lazyload"><code>lazyLoad</code></a>.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'lazyLoad.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, cellElement </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'lazyLoad'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, cellElement </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellElement</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">The image's cell element.</span>
+</p>
+
+<p><code>lazyLoad</code> is triggered on both valid images and broken images. Check <code>event.type</code> to see if the loaded image was loaded with <code>load</code> or <code>error</code>. Use <code>event.target</code> to access the loaded image.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'lazyLoad.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, cellElement </span>) </span>{
+  <span class="keyword">var</span> img = event.originalEvent.target;
+  <span class="built_in">console</span>.log( event.originalEvent.type, img.src );
+  <span class="comment">// load or error on src</span>
+});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'lazyLoad'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, cellElement </span>) </span>{
+  <span class="keyword">var</span> img = event.target;
+  <span class="built_in">console</span>.log( event.type, img.src );
+});
+</code></pre>
+
+<p class="edit-demo">
+    <a href="https://codepen.io/desandro/pen/RPqMra">Edit this demo</a>
+    or <a href="https://codepen.io/desandro/pen/VLVXjv">vanilla JS demo</a> on CodePen
+</p>
+
+
+<h3 id="bglazyload">bgLazyLoad</h3>
+
+<p>Triggered after a background image has been loaded with <a href="options.html#bglazyload"><code>bgLazyLoad</code></a>.</p>
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'bgLazyLoad.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, element </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'bgLazyLoad'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, element </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">element</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">The element of the background image.</span>
+</p>
+
+
+<h3 id="fullscreenchange">fullscreenChange</h3>
+
+<p>Triggered after entering or exiting <a href="options.html#fullscreen">fullscreen</a> view.</p>
+
+<pre><code class=" js
+"><span class="comment">// jQuery</span>
+$carousel.on( <span class="string">'fullscreenChange.flickity'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> event, isFullscreen </span>) </span>{...});
+</code></pre><pre><code class="js
+"><span class="comment">// vanilla JS</span>
+<span class="flickity_var">flkty</span>.on( <span class="string">'fullscreenChange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> isFullscreen </span>) </span>{...});
+</code></pre>
+
+<p class="argument">
+  <code class="argument__code"><span class="params">isFullscreen</span></code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description"><code>true</code> if viewing fullscreen, <code>false</code> if exiting fullscreen</span>
+</p>
+
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <p class="site-footer__copy">Metafizzy makes delightful web plugins &amp; logos</p>
+
+    <div class="showcase">
+    
+      <ul class="showcase-item-list">
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://isotope.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="isotope-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" width="100" height="100">
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 170H30c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 166 86 170 80 170z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 90H30c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 86 86 90 80 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M160 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C170 86 166 90 160 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M240 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C250 86 246 90 240 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M320 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C330 86 326 90 320 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M155 165h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C165 161 161 165 155 165z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M230 160h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C240 156 236 160 230 160z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M305 155h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 151 311 155 305 155z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M65 235H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 231 71 235 65 235z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M140 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C150 226 146 230 140 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M305 235h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 231 311 235 305 235z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M65 315H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 311 71 315 65 315z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M150 320h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C160 316 156 320 150 320z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M220 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C230 226 226 230 220 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M235 325h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C245 321 241 325 235 325z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M320 330h-50c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50 C330 326 326 330 320 330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Isotope</h3>
+                <p class="showcase-item__description">Filter &amp; sort magical layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://infinite-scroll.com">
+              <div class="showcase-item__image">
+                  <svg class="infinite-scroll-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="200" height="200">
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M90,110H10V90c0-22,18-40,40-40h40V110z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front1" d="M270,90L270,90c0-22-18-40-40-40h0H50h0c22,0,40,18,40,40v0v0v160h180V90z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M170,330v-20H90v20v0c0,22,18,40,40,40h0h40V330z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M350,150H210c-22,0-40,18-40,40v140v0c0,22-18,40-40,40h0h220V150z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front3" d="M430,470V270H250v160c0,22,18,40,40,40H430z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M250,190v20h180v-20c0-22-18-40-40-40H210h0C232,150,250,168,250,190L250,190z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M330,410v20v0c0,22-18,40-40,40h0h180c22,0,40-18,40-40v-20H330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Infinite Scroll</h3>
+                <p class="showcase-item__description">Automatically add next page</p>
+              </div>
+            </a>
+          </li>
+    
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://packery.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="packery-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="packery-illo__item" fill="#C09" d="M172 180H48c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 176 176 180 172 180z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M172 340H48c-4 0-8-4-8-8V208c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 336 176 340 172 340z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M492 660H368c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C500 656 496 660 492 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 660H528c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C660 656 656 660 652 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 500H368c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v124C660 496 656 500 652 500z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M332 660H48c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v284C340 656 336 660 332 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 340H528c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v284C660 336 656 340 652 340z"></path>
+                    <path class="packery-illo__draggie" fill="#EA0" d="M572 440H288c-4 0-8-4-8-8V148c0-4 4-8 8-8h284c4 0 8 4 8 8v284C580 436 576 440 572 440z"></path>
+                    <g>
+                      <path class="packery-illo__hand" fill="white" d="M530 250c-11 0-20 9-20 20v-10c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20
+                        s-20 9-20 20v20c-17 0-30 13-30 30c0 11 6 20 14 25l19 35c10 18 30 30 51 30h28
+                        c43 0 78-35 78-78V270C550 259 541 250 530 250z"></path>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="430" y1="300" x2="430" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="470" y1="300" x2="470" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="510" y1="300" x2="510" y2="340"></line>
+                    </g>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Packery</h3>
+                <p class="showcase-item__description">Gapless, draggable grid layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://logo.pizza">
+              <div class="showcase-item__image">
+                  <svg class="logo-pizza-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="logo-pizza-illo__outline" fill="#C25" d="M513 91c-9-0-17 5-21 12l-80 160c-3 5-6 10-11 15l-47 47
+                      c-5 5-12-1-9-7l32-64c5-11-2-23-14-23h-0c-121 0-268 70-327 180
+                      C-9 497 35 609 196 609c138 0 279-85 327-180v0c5-11-2-23-14-23h-77c-13 0-19-15-10-24
+                      l81-81c5-5 11-8 18-8l0 0c13 0 19 15 10 24L494 354c-6 6-6 14 0 20c3 3 6 4 10 4
+                      c4 0 7-1 10-4l80-80h53c9 0 17-5 21-13C707 190 656 97 513 91z M334 281l-59 117
+                      c-2 5-7 8-13 8H97c-4 0-6-4-3-7c49-64 143-114 236-124C333 275 335 278 334 281z
+                       M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z M446 318l-81 81c-5 5-11 8-18 8l0 0
+                      c-13 0-19-15-10-24l81-81c5-5 11-8 18-8l0 0C449 294 455 309 446 318z M447 258L506 139
+                      c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452C448 266 445 262 447 258z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M334 281l-59 117c-2 5-7 8-13 8H97c-4 0-6-4-3-7
+                      c49-64 143-114 236-124C333 275 335 278 334 281z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M447 258L506 139c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452
+                      C448 266 445 262 447 258z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Logo Pizza</h3>
+                <p class="showcase-item__description">Hot &amp; ready logos for sale</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://fizzy.school">
+              <div class="showcase-item__image">
+                  <svg class="witchie-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="200" height="200">
+                    <circle class="witchie-logo__moon" fill="white" cx="500" cy="500" r="500"></circle>
+                    <path class="witchie-logo__broom" fill="#EA0" d="M582 675a35 35 0 0 0 8-20 3 3 0 0 1 3-2h71a3 3 0 0 1 3 3 59 59 0 0 0 0 20 3 3 0 0 1-3 3h-79A3 3 0 0 1 582 675Zm219 4a13 13 0 0 0 13-14c-1-7-7-12-14-12h-44a3 3 0 0 0-3 3v21a3 3 0 0 0 3 3ZM299 660a203 203 0 0 1-27-36 8 8 0 0 0-4-3L178 582a13 13 0 0 0-18 12v77a8 8 0 0 0 8 8h22a5 5 0 0 1 2 10L164 703a8 8 0 0 0-4 7v28a13 13 0 0 0 18 12l146-63a3 3 0 0 0 1-5A197 197 0 0 1 299 660Z"></path>
+                    <path class="witchie-logo__dress" fill="#333" d="M326 705h4a13 13 0 0 1 13 13v8a13 13 0 0 0 4 9l13 13a13 13 0 0 1 0 19l-56 56c-10 10-26-0-22-13L314 714A13 13 0 0 1 326 705Zm397-79c-27 0-47 26-37 54 3 7 11 16 17 19a42 42 0 0 0 19 5 38 38 0 0 0 7-1 8 8 0 0 0 6-8v-62a8 8 0 0 0-6-8 38 38 0 0 0-7-1M840 397c-3-15-33-23-77-23a521 521 0 0 0-59 4 5 5 0 0 1-5-2L567 177a8 8 0 0 0-7-4 8 8 0 0 0-8 8l1 227a5 5 0 0 1-4 5c-74 24-123 55-119 76 2 8 11 14 26 18a3 3 0 0 1 1 4l-11 11c-20 20-56 30-92 30-31 0-63-8-84-23a5 5 0 0 0-3-1 5 5 0 0 0-5 5c0 78 68 173 183 173h75a10 10 0 0 0 7-3l38-38a16 16 0 0 0 0-23l-34-34a10 10 0 0 1 0-14l15-15a3 3 0 0 1 5 2v15a5 5 0 0 0 5 5H674a4 4 0 0 0 3-7l-90-90a3 3 0 0 1 1-4c34-19 59-49 67-84a3 3 0 0 1 2-2c6-1 12-1 17-1 22 0 37 5 39 14 1 6 3 11 2 17-5 17 1 31 8 31a6 6 0 0 0 2-0C797 448 845 419 840 397Z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Fizzy School</h3>
+                <p class="showcase-item__description">Lessons in JavaScript for jQuery newbies</p>
+              </div>
+            </a>
+          </li>
+    
+      </ul> 
+    
+    </div>
+
+    <p class="site-footer__copy">
+      <a href="https://twitter.com/metafizzyco">
+        <svg class="twitter-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+          <path d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z"></path>
+        </svg>
+        Follow @metafizzyco on Twitter for Flickity updates
+      </a>
+    </p>
+
+    <div class="mfzy-brand">
+      <a class="mfzy-brand__link" href="https://metafizzy.co">
+        <svg class="mfzy-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 144 144" width="36" height="36">
+          <title>Metafizzy logo</title>
+          <defs>
+            <path id="mfzy-logo__body" d="M 120 24 a 12 12 0 0 0-24 0 a 72 72 0 0 1 -1 11
+              a 40 40 0 0 0 -13 -8.5 A 12 12 0 1 0 61.1 25.1 c -8 2 -14 6 -19.6 11.6 
+              A 12 12 0 1 0 35.3 55.5 L 45.8 72.1 l -16 9.6 A 12 12 0 0 0 42.2 102.3
+              L 58 92.8 a 20 20 0 0 1 -0.2 11.9 l -5.2 15.5 a 12 12 0 0 0 22.8 7.6
+              l 1.1 -3.3 l 23.7 -14.2 a 12 12 0 0 0 5.2 -6.5 l 4 -12 A 50 50 0 0 0 111.9 76
+              a 52 52 0 0 0 -1.6 -12.8 C 115 57 120 44 120 24Z"></path>
+            <path id="mfzy-logo__eye" d="M 0 6.5 a 6.5 6.5 0 0 1 13 0 c 0 3.5 -3 0.5 -6.5 0.5 s -6.5 3 -6.5 -0.5 Z"></path>
+            <clipPath id="mfzy-logo__body-clip">
+              <use xlink:href="#mfzy-logo__body"></use>
+            </clipPath>
+          </defs>
+          <use class="mfzy-logo__body-outline" xlink:href="#mfzy-logo__body" fill="#333" stroke="#333" stroke-width="16"></use>
+          <use class="mfzy-logo__body-fill" xlink:href="#mfzy-logo__body"></use>
+          <g class="mfzy-logo__stripes" clip-path="url(#mfzy-logo__body-clip)">
+            <rect fill="#E62" x="16" width="120" height="138"></rect>
+            <path fill="#C25" d="M96 24L16 72V0h80v24z"></path>
+            <path fill="#EA0" d="M116 70L16 130v-26l95-57 5 23z"></path>
+            <path fill="#19F" d="M136 138H16v-8l120-72v80z"></path>
+          </g>
+          <path class="mfzy-logo__cut-ins" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" d="M 72 20.4 c 23 0 44 29 44 56
+            M 54 103.4 a 16 16 0 0 0 0 -10
+            M 96 98 c -2 2 -8 6 -8.5,6 l -8.4 25.1"></path>
+          <g transform="translate(53 57) rotate(-31)">
+            <ellipse class="mfzy-logo__snout" cx="25" cy="21" rx="14" ry="9" fill="#FFF"></ellipse>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333"></use>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333" transform="translate(29 0)"></use>
+            <path class="mfzy-logo__feature" d="M 28.6 14 a 3 3 0 0 1 1.3 5.6 l -2.6 1.2 a 3 3 0 0 1 -2.6 0
+              l -2.6 -1.2 a 3 3 0 0 1 1.3 -5.6 Z" fill="#333"></path>
+          </g>
+        </svg>
+        <svg class="mfzy-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none" stroke="#333" width="140" height="40">
+          <g transform="skewX(-18)">
+            <path stroke-width="8" d="M38 20h6c4 0 7 2 9 6l9 18l12-24h2v22
+            a20 22 0 0 0 20 22M48 22v28a12 15 0 0 1-24 0M98 44a6 6 0 0 0 0-12h-2
+            a8 10 0 0 0 0 20h14a8 10 0 0 0 8-10M118 12v30a8 10 0 0 0 16 0M150 36
+            q-4-4-8-4a8 10 0 1 0 8 10m0-14v14a8 10 0 0 0 8 10M184 20a9 9 0 0 0-18 0
+            v34a8 10 0 0 1-8 10M158 32h24v24M190 32h18l-12 20h18M216 32h18l-12 20h18
+            a8 10 0 0 0 8-10m0-14v14a8 10 0 0 0 16 0m0-14v38a6 6 0 0 1-12 0
+            c0-12 32-8 32-32c0-10-6-16-15-16M108 24h24a6 6 0 0 0 6-6M102 38h-4"></path>
+            <g stroke-width="6">
+              <circle cx="38" cy="22" r="3"></circle>
+              <circle cx="182" cy="20" r="3"></circle>
+              <circle cx="269" cy="20" r="3"></circle>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="js/flickity-docs.min.js?2"></script>
+
+
+
+
+</body></html>

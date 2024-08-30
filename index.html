@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="google_sheets.css">
+    <title>Portfolio | Angu_jayalakshmi_R</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+ 
+
+    <style media="screen">
+.carousel {
+  background: transparent;
+  opacity: 1;
+  width: 80%;
+  align-items: center;
+  position: relative;
+  left: 130px;
+}
+.carousel-cell{
+width: 50%;
+height: 300px;
+margin-right: 0px;
+border-radius: 25px;
+background-size: cover;
+z-index: 1000;
+background-position: center center;}
+.carousel-cell:before{
+display: block;
+content:'';
+}
+@media (max-width: 991px){
+    .carousel{
+        position: relative;
+        left: 70px;
+    }
+    .carousel-cell{
+        width:70%;
+    }
+}
+@media (max-width: 768px) {
+    .carousel{
+        position: relative;
+        left: 25px;
+        width: 90%;
+    }
+    .carousel-cell{
+        width:100%;
+    }
+}
+
+.success-message {
+    display: none;
+    color: green;
+    font-size: 1.2em;
+     margin-top: 10px;
+}
+</style>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+</head>
+
+<body>
+    <header>
+   
+        <!-- header site -->
+        <div class="logo"><span>A</span>ngu.</div>
+        <ul class="navlist">
+        <li><a href="#home" style="--i:1;">Home</a></li>
+        <li><a href="#about" style="--i:2;">About</a></li>
+        <li><a href="#services" style="--i:3;">Services</a></li>
+        <li><a href="#skills" style="--i:4;">Skills</a></li>
+        <li><a href="#portfolio" style="--i:5;">Portfolio</a></li>
+        <li><a href="#contact" style="--i:6;">Contact</a></li>
+        </ul>
+        <div id="menu-icon" class="bx bx-menu"></div>
+        </header>
+<!-- home section -->
+<section id="home" class="home">
+    <div class="home-content scroll-scale">
+        <h1>Hi! I'm Angu jayalakshmi R</h1>
+        <div class="change-text">
+            <h3>And I'm</h3>
+            <h3>
+                <span class="word">Web&nbsp; Designer</span>
+                <span class="word">Frontend &nbsp;Developer</span>
+                <span class="word">UX/UI&nbsp; developer</span>
+            </h3>
+        </div>
+        <p>Elevate your online presence with my expertise in creative UI/UX design, web design, and front-end development. Let's build something amazing together!</p>
+        <div class="info-box">
+            <div class="email-info">
+                <h5>Email:</h5>
+                <span>angujayalakshmi2005@gmail.com</span>
+            </div>
+            <div class="behance-info">
+                <h5></h5>
+                <span></span>
+            </div>
+        </div>
+        <div class="btn-box">
+            <a href="Resume.pdf" download class="btn">Download CV</a>
+            <a href="mailto:angujayalakshmi2005@gmail.com" class="btn">Hire Me Now!</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/jayalakshmi-ramesh-17267825a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/AngujayalakshmiR" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="mailto:angujayalakshmi2005@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+            <a href="tel:9384967176"><i class='bx bx-phone'></i></a>
+        </div>
+    </div>
+    <div class="home-image scroll-scale">
+        <div class="floating floating-img">
+        <img src="img/portfolioimg1.png" style="height: 100%;width: 100%;" alt="">
+        </div>
+        
+    </div>
+</section>
+<!--about section -->
+<section id="about" class="about scroll-scale">
+    <div class="img-about">
+    <img src="img/woman.png" alt="">
+    <div class="info-about1">
+    <span>10+</span>
+    <p>Certificates Earned</p>
+    </div>
+    <div class="info-about2">
+    <span>5+</span>
+    <p>Projects Completed</p>
+    </div>
+    <div class="info-about3">
+    <span>100%</span>
+    <p>Customer satisfaction</p>
+    </div>
+    </div>
+    <div class="about-content">
+        <span>Let me introduce myself</span>
+        <h2>About Me</h2>
+        <h3>Journey of a Passionate</h3>
+        <p>I am a self-confident, enthusiastic, and determined individual from Karur, Tamil Nadu. Currently, I am in my third year of undergraduate studies (B.Tech Information Technology) at one of the top colleges in Tamil Nadu. 
+           <br>My passion lies in  <span style="color: yellow;">front-end development and web designing</span>, where I leverage my creativity and technical skills.
+            I excel in teamwork, communication, creativity, and decision-making. My strong critical thinking and mental ability enable me to tackle complex problems with ease. Proficient in C programming, I am also expanding my expertise in JAVA and Python.</p>
+        </div>
+    </section>
+
+<!--Qualification section-->
+<section id="quali" class="quali">
+    <div class="main-text scroll-scale">
+    <span>what i have learned</span>
+    <h2>Educational Qualification</h2>
+    </div>
+    <div class="timeline scroll-scale">
+        <div class="acontainer left-container">
+            <div class="atext-box">
+                <i class='bx bxs-book' style="font-size: 32px;"></i>
+        <h2>Bharani Vidhyalaya Senior Secondary School (CBSE)</h2>
+        <small>2019 - 2020</small>
+        <p> SSLC (CLASS X) |
+           <strong>Percentage: 86.2 %</strong></p>
+            </div>
+        </div>
+        <div class="acontainer right-container">
+            <div class="atext-box">
+                <i class='bx bxs-school' style="font-size: 32px;"></i>
+        <h2 > Bharani Vidhyalaya Senior Secondary School (CBSE)</h2>
+        <small>2020 - 2022</small>
+        <p>HSC (CLASS XII) |
+            <strong>Percentage: 88.2 % </strong></p>
+            </div>
+        </div>
+        <div class="acontainer left-container">
+            <div class="atext-box">
+                <i class='bx bxs-graduation' style="font-size: 32px;" ></i>
+            <h2>M Kumarasamy College of Engineering</h2>
+            <small>2020 - 2026</small>
+            <p>B.TECH IN INFORMATION TECHNOLOGY<br>
+                <strong>CGPA: 9.045 / 10</strong> |
+                Currently Pursuing (Third year)</p>
+            </div>
+        </div>
+
+        </div>
+
+</section>
+
+<!-------------------Certificates section---------------------->
+<section id="Certificates" class="certificates scroll-scale">
+    <div class="amain-text scroll-scale">
+    <span>Professional Accolades</span>
+    <h2>Certificates Earned</h2>
+</div><br><br>
+<div class="carousel" data-flickity='{ "autoPlay": true }'>
+    <div class="carousel-cell" style="background-image:url(img/c1html.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c2css.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c3design_app.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c4uiux_for_beginners.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c5earth5r.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c6pps.jpg)"></div>
+    <div class="carousel-cell" style="background-image:url(img/c7javanptel.jpg)"></div>
+</div>
+</section>
+
+<!--services section-->
+<section id="services" class="services">
+    <div class="main-text scroll-scale">
+    <span>what i will do for you</span>
+    <h2>Our Services</h2>
+    </div>
+    <div class="section-services scroll-bottom">
+    <div class=" service-box">
+        <i class='bx bx-code-alt service-icon'></i>
+    
+    <h3>Front-end development</h3>
+    <p>
+        Front-end development involves creating the user interface and interactive elements of a website using HTML, CSS, and JavaScript. It focuses on ensuring a responsive and dynamic user experience across various devices and browsers.
+    </p>
+    <div class="btn-box service-btn">
+    <a href="#" class="btn">HTML,CSS,<br>Bootstrap,JS</a>
+    </div>
+    </div>
+    <div class=" service-box">
+        <i class='bx bxs-layer service-icon'></i>
+        
+        <h3>UI/UX Design</h3>
+        <p>
+            UI/UX design encompasses the creation of intuitive user interfaces and seamless user experiences, emphasizing usability and aesthetic appeal. It involves wireframing, prototyping, and user testing to refine and enhance digital products.
+        </p>
+        <div class="btn-box service-btn">
+        <a href="#" class="btn">Design Tools</a>
+        </div>
+        </div>
+        <div class=" service-box">
+            <i class='bx bx-desktop service-icon'></i>
+            <h3>Web Design</h3>
+            <p>
+                Web design is the process of planning and creating visually appealing and functional layouts for websites. It combines elements of graphic design, typography, and responsive design to deliver a cohesive and engaging online presence.
+            </p>
+            <div class="btn-box service-btn">
+            <a href="#" class="btn">Figma</a>
+            </div>
+            </div>
+    </div>
+    </section>
+
+
+<!--skill section-->
+<section id="skills" class="skills">
+    <div class="main-text scroll-scale">
+        <span>technical and professional</span>
+        <h2>My Skills</h2>
+    </div>
+    <div class="skill-main">
+        <div class="skill-left scroll-scale">
+            <h3>Technical Skills</h3>
+
+            <div class="skill-bar">
+                <div class="info">
+                    <p>HTML</p>
+                    <p>95%</p>
+                </div>
+                <div class="bar">
+                    <span class="html"></span>
+                </div>
+            </div>
+
+            <div class="skill-bar">
+                <div class="info">
+                    <p>CSS</p>
+                    <p>85%</p>
+                </div>
+                <div class="bar">
+                    <span class="css"></span>
+                </div>
+            </div>
+
+            <div class="skill-bar">
+                <div class="info">
+                    <p>Bootstrap</p>
+                    <p>80%</p>
+                </div>
+                <div class="bar">
+                    <span class="bootstrap"></span>
+                </div>
+            </div>
+
+            <div class="skill-bar">
+                <div class="info">
+                    <p>Javascript</p>
+                    <p>70%</p>
+                </div>
+                <div class="bar">
+                    <span class="javascript"></span>
+                </div>
+            </div>
+
+            <div class="skill-bar">
+                <div class="info">
+                    <p>Figma</p>
+                    <p>85%</p>
+                </div>
+                <div class="bar">
+                    <span class="figma"></span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-right scroll-scale">
+            <h3>Professional Skills</h3>
+            <div class="professional">
+                <div class="box">
+                    <div class="circle" data-dots="80" data-percent="85"></div>
+                    <div class="text">
+                        <big>85%</big>
+                        <small>Problem solving</small>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="circle" data-dots="80" data-percent="80"></div>
+                    <div class="text">
+                        <big>80%</big>
+                        <small>Critical thinking</small>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="circle" data-dots="80" data-percent="95"></div>
+                    <div class="text">
+                        <big>95%</big>
+                        <small>Team work</small>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="circle" data-dots="80" data-percent="90"></div>
+                    <div class="text">
+                        <big>90%</big>
+                        <small>Communication</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-----------------------------portfolio section--------------------------------------->
+<section id="portfolio" class="portfolio">
+<div class="main-text scroll-scale">
+    <span> what i will do for you</span>
+    <h2>Latest Projects</h2>
+</div>
+<div class="container">
+    <div class="fillter-buttons scroll-scale">
+        <button class="btn" data-filter="all">All</button>
+        <button class="btn" data-filter=".front-end">Front-end Website projects</button>
+        <button class="btn" data-filter=".webdesign">Web designs</button>     
+    </div>
+    <div class="portfolio-gallery scroll-bottom">
+        <div class="port-box mix front-end">
+            <div class="port-image">
+                <img src="img/elearning_landing_page.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>E-Learning Landing Page</h3>
+            <p>EduVibe Academy is a landing page website designed for educational purposes, crafted using HTML, CSS, Bootstrap, and JavaScript, offering an engaging and interactive experience for learners.</p>
+            <a href="https://edu-vibe-academy-e-learning-landing-page.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+
+        <div class="port-box mix front-end">
+            <div class="port-image">
+                <img src="img/stopwatch_timer.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>Instant Stopwatch Timer</h3>
+            <p>Instant Stopwatch Timer is a sleek, user-friendly website built with HTML, CSS, and JavaScript, providing a straightforward and efficient stopwatch experience with real-time timing and responsive design.</p>
+            <a href="https://instant-stopwatch-timer.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+
+        <div class="port-box mix front-end">
+            <div class="port-image">
+                <img src="img/tictactoe.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>Classic-game-Tic-Tac-Toe</h3>
+            <p>Classic Game Tic-Tac-Toe is a dynamic web-based game crafted with HTML, CSS, and JavaScript, offering a classic gaming experience with interactive gameplay and responsive design for all devices.</p>
+            <a href="https://classic-game-tic-tac-toe.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+        <div class="port-box mix front-end">
+            <div class="port-image">
+                <img src="img/calculator.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>Counting Concepts</h3>
+            <p>Counting Concepts is a versatile calculator application website created with HTML, CSS, and JavaScript, featuring a clean interface and functional design for accurate calculations and an intuitive user experience.</p>
+            <a href="https://counting-concepts-a-calculator-application.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+
+        <div class="port-box mix webdesign">
+            <div class="port-image">
+                <img src="img/fusionstudio.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>FusionStudio UI/UX</h3>
+            <p>FusionStudio UI/UX, designed in Figma, showcases an engaging platform for diverse dance classes. Its intuitive interface highlights various dance styles, providing a vibrant and interactive experience for users.</p>
+            <a href="https://www.figma.com/proto/tjIb6YSatQYIwGwHJt3G3E/FusionStudioUI%2FUX?type=design&node-id=1-9&t=aECnonU9Cxvj72jk-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A9" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+
+        <div class="port-box mix webdesign">
+            <div class="port-image">
+                <img src="img/evergrowadvisors.png" alt="">
+            </div>
+        <div class="port-content">
+            <h3>Evergrow Advisors UI/UX</h3>
+            <p>Evergrow Advisors UI/UX, designed in Figma, enhances B2B client pipelines with an AI-driven cold email process. It supports diverse industries like SaaS, healthtech, and more, ensuring tailored business growth solutions.</p>
+            <a href="https://www.figma.com/proto/XxmABQvinTWTiKrkdh1uX5/EvergrowAdvisors?node-id=1-514&t=wBlcyo375eOY6wrd-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-----------------------------contact section--------------------------------------->
+<div id="contact" class="contant">
+    <div class="main-text scroll-scale">
+        <span>ask me question</span>
+        <h2>Contact Me</h2>
+    </div>
+    <script src="https://sheetdb.io/s/f/0ojohz0zpx93b.js"></script>
+</div>
+
+<!-- footer website -->
+<footer >
+    <p>Copyright &copy; 2024 by Angu_jayalakshmi_R || All Right Reserved.</p>
+    <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+</footer>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="mixitup.min.js" ></script>
+    <script src="script.js"></script>
+    <script src="google_sheets.js"></script>
+
+</body>
+</html>
+
+

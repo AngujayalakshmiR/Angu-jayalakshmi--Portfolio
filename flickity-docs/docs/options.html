@@ -1,0 +1,2094 @@
+<!DOCTYPE html><html lang="en" class="export"><head>
+  <meta charset="utf-8">
+  <meta name="description" content="Touch, responsive, flickable carousels">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Flickity v2 · Options</title>
+
+    <link rel="stylesheet" href="css/flickity-docs.css?6" media="screen">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@metafizzyco">
+  <meta name="twitter:url" content="https://flickity.metafizzy.co/options.html">
+  <meta name="twitter:title" content="Flickity Options">
+  <meta name="twitter:description" content="Touch, responsive, flickable carousels">
+
+</head>
+<body class="page--options">
+
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="main">
+  <div class="container">
+      <h1 class="page-title">Options</h1>
+
+
+    <ul class="page-nav" data-js="page-nav">
+<li class="page-nav__item page-nav__item--h2">
+        <a href="#behavior">Behavior</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#draggable">draggable</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#freescroll">freeScroll</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#wraparound">wrapAround</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#groupcells">groupCells</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#autoplay">autoPlay</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#fullscreen">fullscreen</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#fade">fade</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#adaptiveheight">adaptiveHeight</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#watchcss">watchCSS</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#asnavfor">asNavFor</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#hash">hash</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#dragthreshold">dragThreshold</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#selectedattraction-friction">selectedAttraction &amp; friction</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#freescrollfriction">freeScrollFriction</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#images">Images</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#imagesloaded">imagesLoaded</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#lazyload">lazyLoad</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#bglazyload">bgLazyLoad</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#setup">Setup</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#cellselector">cellSelector</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#initialindex">initialIndex</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#accessibility">accessibility</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#setgallerysize">setGallerySize</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#resize">resize</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#cell-position">Cell position</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#cellalign">cellAlign</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#contain">contain</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#percentposition">percentPosition</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#righttoleft">rightToLeft</a>
+      </li><li class="page-nav__item page-nav__item--h2">
+        <a href="#ui">UI</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#prevnextbuttons">prevNextButtons</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#pagedots">pageDots</a>
+      </li><li class="page-nav__item page-nav__item--h3">
+        <a href="#arrowshape">arrowShape</a>
+      </li></ul>
+
+
+
+<h2 id="behavior">Behavior</h2>
+
+
+<h3 id="draggable">draggable</h3>
+
+<p>Enables dragging and flicking. Enabled by default when carousel has 2 or more slides <code><span class="comment">draggable: '&gt;1'</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+"><span class="comment">// Enable dragging with at least 2 slides</span>
+<span class="comment">// set by default</span>
+<span class="comment">// draggable: '&gt;1'</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+"><span class="comment">// Disable dragging</span>
+<span class="attr">draggable</span>: <span class="literal">false</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;draggable&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/dPdoRO">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+"><span class="comment">// Disable dragging when only 1 slide</span>
+<span class="comment">// set by default</span>
+<span class="comment">// draggable: '&gt;1'</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="">
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+"><span class="comment">// enable dragging, even with only 1 slide</span>
+<span class="attr">draggable</span>: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;draggable&quot;: true }">
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+
+<h3 id="freescroll">freeScroll</h3>
+
+<p>Enables content to be freely scrolled and flicked without aligning cells to an end position.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">freeScroll: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;freeScroll&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/bNLGNZ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Enable <code>freeScroll</code> and <code>contain</code> for a simple horizontal scroller.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">freeScroll: <span class="literal">true</span>,
+<span class="attr">contain</span>: <span class="literal">true</span>,
+<span class="comment">// disable previous &amp; next buttons and dots</span>
+<span class="attr">prevNextButtons</span>: <span class="literal">false</span>,
+<span class="attr">pageDots</span>: <span class="literal">false</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;freeScroll&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false, &quot;pageDots&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/zxRYGo">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Enable <code>freeScroll</code> and <code>wrapAround</code> and you can flick forever, man.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">freeScroll: <span class="literal">true</span>,
+<span class="attr">wrapAround</span>: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;freeScroll&quot;: true, &quot;wrapAround&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/GgQRJX">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="wraparound">wrapAround</h3>
+
+<p>At the end of cells, wrap-around to the other end for infinite scrolling.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">wrapAround: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;wrapAround&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/myXdej">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="groupcells">groupCells</h3>
+
+<p>Groups cells together in slides. Flicking, page dots, and previous/next buttons are mapped to group slides, not individual cells. <code>is-selected</code> class is added to the multiple cells in the selected slide.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">groupCells: <span class="literal">true</span>
+<span class="comment">// if set to true,</span>
+<span class="comment">// group cells that fit in carousel viewport</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity="{ &quot;groupCells&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/XKZXyv">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">groupCells: <span class="number">2</span>
+<span class="comment">// if set to a number, group cells by that number</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity="{ &quot;groupCells&quot;: 2 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/EywKOW">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">groupCells: <span class="string">'80%'</span>
+<span class="comment">// if set to a percent string,</span>
+<span class="comment">// group cells that fit in the percent of</span>
+<span class="comment">// the width of the carousel viewport</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity="{ &quot;groupCells&quot;: &quot;80%&quot; }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/mEBPQG">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="autoplay">autoPlay</h3>
+
+<p>Automatically advances to the next cell.</p>
+
+<p>Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the carousel is clicked or a cell is selected.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">autoPlay: <span class="literal">true</span>
+<span class="comment">// advance cells every 3 seconds</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;autoPlay&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/RNQwaB">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">autoPlay: <span class="number">1500</span> <span class="comment">// {Number}</span>
+<span class="comment">// advance cells ever {Number} milliseconds</span>
+<span class="comment">// 1500 will advance cells every 1.5 seconds</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;autoPlay&quot;: 1500 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/NPyWRZ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Auto-playing will pause when the user hovers over the carousel. Set <code>pauseAutoPlayOnHover: <span class="literal">false</span></code> to disable this behavior.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">autoPlay: <span class="number">1500</span>,
+<span class="attr">pauseAutoPlayOnHover</span>: <span class="literal">false</span>
+<span class="comment">// auto play continues when user hovers over carousel</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;autoPlay&quot;: 1500, &quot;pauseAutoPlayOnHover&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/yeeQJK">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="fullscreen">fullscreen</h3>
+
+<p>Enables fullscreen view of carousel. Adds button to view and exit fullscreen. In fullscreen view, pressing <kbd>ESC</kbd> will exit fullscreen.</p>
+
+<div class="call-out">
+  <p>Fullscreen functionality requires the <a href="https://github.com/metafizzy/flickity-fullscreen">flickity-fullscreen package</a>. It is not included in <code>flickity.pkgd.js</code> and <a href="https://github.com/metafizzy/flickity-fullscreen#install">must be installed separately</a>.</p>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">fullscreen: <span class="literal">true</span>
+</code></pre><pre><code class=" css
+"><span class="comment">/* .is-fullscreen added to carousel when fullscreen
+   size cells to full height when fullscreen */</span>
+<span class="selector-class">.carousel</span><span class="selector-class">.is-fullscreen</span> <span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">height</span>: <span class="number">100%</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;fullscreen&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/LdRJjZ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>For fullscreen image carousels, use CSS to center images in cells. This demo shows one cell each in the viewport, centering with flexbox.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">fullscreen: <span class="literal">true</span>,
+<span class="attr">lazyLoad</span>: <span class="number">1</span>
+</code></pre>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">img</span> <span class="attr">data-flickity-lazyload</span>=<span class="string">"orange-tree.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">img</span> <span class="attr">data-flickity-lazyload</span>=<span class="string">"tulip.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+<pre><code class=" css
+"><span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">width</span>: <span class="number">100%</span>; <span class="comment">/* full width */</span>
+  <span class="attribute">height</span>: <span class="number">200px</span>;
+  <span class="attribute">background</span>: <span class="number">#222</span>;
+  <span class="comment">/* center images in cells with flexbox */</span>
+  <span class="attribute">display</span>: flex;
+  <span class="attribute">align-items</span>: center;
+  <span class="attribute">justify-content</span>: center;
+}
+
+<span class="selector-class">.carousel</span><span class="selector-class">.is-fullscreen</span> <span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">height</span>: <span class="number">100%</span>;
+}
+
+<span class="selector-class">.carousel-cell</span> <span class="selector-tag">img</span> {
+  <span class="attribute">display</span>: block;
+  <span class="attribute">max-height</span>: <span class="number">100%</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;fullscreen&quot;: true, &quot;lazyLoad&quot;: 1 }">
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=517">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/540/720/?image=696">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=56">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/800/500/?image=1084">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=1080">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=1074">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=1069">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/800/500/?image=1062">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=935">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=855">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=824">
+        </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/aYmaEv">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<p>This demo shows multiple cells in the viewport, using images’ natural sizes for cell size, vertically centered using <code>transform</code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">fullscreen: <span class="literal">true</span>,
+<span class="attr">lazyLoad</span>: <span class="number">2</span>
+</code></pre>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-image"</span>
+    <span class="attr">data-flickity-lazyload</span>=<span class="string">"orange-tree.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-image"</span>
+    <span class="attr">data-flickity-lazyload</span>=<span class="string">"tulip.jpg"</span> /&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+<pre><code class=" css
+"><span class="selector-class">.carousel-image</span> {
+  <span class="attribute">display</span>: block;
+  <span class="attribute">height</span>: <span class="number">200px</span>;
+  <span class="comment">/* set min-width,
+     allow images to determine cell width */</span>
+  <span class="attribute">min-width</span>: <span class="number">150px</span>;
+  <span class="attribute">max-width</span>: <span class="number">100%</span>;
+  <span class="attribute">margin-right</span>: <span class="number">10px</span>;
+  <span class="comment">/* vertically center */</span>
+  <span class="attribute">top</span>: <span class="number">50%</span>;
+  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">50%</span>)
+}
+
+<span class="selector-class">.carousel</span><span class="selector-class">.is-fullscreen</span> <span class="selector-class">.carousel-image</span> {
+  <span class="attribute">height</span>: auto;
+  <span class="attribute">max-height</span>: <span class="number">100%</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;fullscreen&quot;: true, &quot;lazyLoad&quot;: 2 }">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=517">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/540/720/?image=696">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=56">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/800/500/?image=1084">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=1080">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=1074">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=1069">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/800/500/?image=1062">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=935">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/720/540/?image=855">
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="https://picsum.photos/640/640/?image=824">
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/WzGgJY">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="fade">fade</h3>
+
+<p>Fades between transitioning slides instead of moving.</p>
+
+<div class="call-out">
+  <p>Fade functionality requires the <a href="https://github.com/metafizzy/flickity-fade">flickity-fade package</a>. It is not included in <code>flickity.pkgd.js</code> and <a href="https://github.com/metafizzy/flickity-fade#install">must be installed separately</a>.</p>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">fade: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--fade" data-flickity="{ &quot;fade&quot;: true, &quot;imagesLoaded&quot;: true }">
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/720/540/?image=517">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/540/720/?image=696">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/720/540/?image=56">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/800/500/?image=1084">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/720/540/?image=1080">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/640/640/?image=1074">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/720/540/?image=1069">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/800/500/?image=1062">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/640/640/?image=935">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/720/540/?image=855">
+        </div>
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="https://picsum.photos/640/640/?image=824">
+        </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/RvGmxY">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="adaptiveheight">adaptiveHeight</h3>
+
+<p>Changes height of carousel to fit height of selected slide.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">adaptiveHeight: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;adaptiveHeight&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+      <div class="carousel-cell carousel-cell--adapt-height3"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/dXVXYj">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Use CSS transitions to transition height changes. But heads up: transitioning height triggers reflow and may cause poor performance.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">adaptiveHeight: <span class="literal">true</span>
+</code></pre><pre><code class=" css
+"><span class="selector-class">.flickity-viewport</span> {
+  <span class="attribute">transition</span>: height <span class="number">0.2s</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--transition-adaptive-height" data-flickity="{ &quot;adaptiveHeight&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+      <div class="carousel-cell carousel-cell--adapt-height3"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/PzJzPv">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+
+<h3 id="watchcss">watchCSS</h3>
+
+<p>You can enable and disable Flickity with CSS. <code>watchCSS</code> option watches the content of <code>:after</code> of the carousel element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">watchCSS: <span class="literal">true</span>
+<span class="comment">// enable Flickity in CSS when</span>
+<span class="comment">// element:after { content: 'flickity' }</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* enable Flickity by default */</span>
+<span class="selector-class">.carousel</span>:after {
+  content: <span class="string">'flickity'</span>;
+  <span class="attribute">display</span>: none; <span class="comment">/* hide :after */</span>
+}
+
+<span class="keyword">@media</span> screen <span class="keyword">and</span> ( <span class="attribute">min-width</span>: <span class="number">768px</span> ) {
+  <span class="comment">/* disable Flickity for large devices */</span>
+  <span class="selector-class">.carousel</span>:after {
+    content: <span class="string">''</span>;
+  }
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--watch-css" data-flickity="{ &quot;watchCSS&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/NPyWbQ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="asnavfor">asNavFor</h3>
+
+<p>Use one Flickity carousel as navigation for another.</p>
+
+<ul>
+  <li>Clicking the nav carousel will select the content carousel.</li>
+  <li>Selecting a cell in the content carousel will sync to the nav carousel.</li>
+</ul>
+<pre><code class=" js
+"><span class="comment">// asNavFor can be set a selector string</span>
+<span class="attr">asNavFor</span>: <span class="string">'.carousel-main'</span>
+<span class="comment">// or an element</span>
+<span class="attr">asNavFor</span>: $(<span class="string">'.carousel-main'</span>)[<span class="number">0</span>]
+<span class="attr">asNavFor</span>: <span class="built_in">document</span>.querySelector(<span class="string">'.carousel-main'</span>)
+</code></pre>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+"><span class="comment">// 1st carousel, main</span>
+$(<span class="string">'.carousel-main'</span>).flickity();
+<span class="comment">// 2nd carousel, navigation</span>
+$(<span class="string">'.carousel-nav'</span>).flickity({
+  <span class="attr">asNavFor</span>: <span class="string">'.carousel-main'</span>,
+  <span class="attr">contain</span>: <span class="literal">true</span>,
+  <span class="attr">pageDots</span>: <span class="literal">false</span>
+});
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* is-nav-selected class added to nav cells */</span>
+<span class="selector-class">.carousel-nav</span> <span class="selector-class">.carousel-cell</span><span class="selector-class">.is-nav-selected</span> {
+  <span class="attribute">background</span>: <span class="number">#ED2</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--as-nav-for-main carousel--full-width" data-flickity="">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <div class="carousel carousel--as-nav-for-nav carousel--nav" data-flickity="{ &quot;asNavFor&quot;: &quot;.carousel--as-nav-for-main&quot;, &quot;contain&quot;: true, &quot;pageDots&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/wByaqj">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="call-out">
+  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Webpack or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html#module-loaders">Extras</a>.</p>
+</div>
+
+
+<h3 id="hash">hash</h3>
+
+<p>Enables hash navigation to select slides with links and URLs. Changes page URL to selected cell <code>id</code>.</p>
+
+<div class="call-out">
+  <p>Hash behavior option requires the <a href="https://github.com/metafizzy/flickity-hash">flickity-hash package</a>. It is not included in <code>flickity.pkgd.js</code> and <a href="https://github.com/metafizzy/flickity-hash#install">must be installed separately</a>.</p>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">hash: <span class="literal">true</span>
+</code></pre>
+<pre><code class=" html
+"><span class="comment">&lt;!-- add ids to cell elements --&gt;</span>
+<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span> <span class="attr">id</span>=<span class="string">"carousel-cell1"</span>&gt;</span>
+    ...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span> <span class="attr">id</span>=<span class="string">"carousel-cell2"</span>&gt;</span>
+    ...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span> <span class="attr">id</span>=<span class="string">"carousel-cell3"</span>&gt;</span>
+    ...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+
+<span class="comment">&lt;!-- link to cells --&gt;</span>
+<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#carousel-cell2"</span>&gt;</span>View cell 2<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;hash&quot;: true }">
+      <div class="carousel-cell" id="carousel-cell1"></div>
+      <div class="carousel-cell" id="carousel-cell2"></div>
+      <div class="carousel-cell" id="carousel-cell3"></div>
+      <div class="carousel-cell" id="carousel-cell4"></div>
+      <div class="carousel-cell" id="carousel-cell5"></div>
+    </div>
+    <p>
+      View:
+      <a href="#carousel-cell1">Cell 1</a>,
+      <a href="#carousel-cell2">Cell 2</a>,
+      <a href="#carousel-cell3">Cell 3</a>,
+      <a href="#carousel-cell4">Cell 4</a>,
+      <a href="#carousel-cell5">Cell 5</a>
+    </p>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/aYmRjV">Edit this demo on CodePen</a>
+    </p>
+    <p><a href="https://s.codepen.io/desandro/debug/aYmRjV">View CodePen in debug mode to see URL hash change.</a></p>
+  </div>
+</div>
+
+
+<h3 id="dragthreshold">dragThreshold</h3>
+
+<p>The number of pixels a mouse or touch has to move before dragging begins. Increase <code>dragThreshold</code> to allow for more wiggle room for vertical page scrolling on touch devices. Default <code><span class="comment">dragThreshold: 3</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">dragThreshold: <span class="number">10</span>
+<span class="comment">// dragging doesn't start until 10px moved</span>
+<span class="comment">// more room for vertical scrolling</span>
+<span class="comment">// on touch devices</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity=" { &quot;dragThreshold&quot;: 10 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/QEqENy">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="selectedattraction-friction">selectedAttraction &amp; friction</h3>
+
+<p><code>selectedAttraction</code> and <code>friction</code> are the two options that control the speed and motion of the slider.</p>
+
+<p><code>selectedAttraction</code> attracts the position of the slider to the selected cell. Higher attraction makes the slider move faster. Lower makes it move slower. Default <code><span class="comment">selectedAttraction: 0.025</span></code>.</p>
+
+<p><code>friction</code> slows the movement of slider. Higher friction makes the slider feel stickier and less bouncy. Lower friction makes the slider feel looser and more wobbly. Default <code><span class="comment">friction: 0.28</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">selectedAttraction: <span class="number">0.2</span>,
+<span class="attr">friction</span>: <span class="number">0.8</span>
+<span class="comment">// higher attraction and higher friction</span>
+<span class="comment">// faster transitions</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;selectedAttraction&quot;: 0.2, &quot;friction&quot;: 0.8 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/aOyMam">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">selectedAttraction: <span class="number">0.01</span>,
+<span class="attr">friction</span>: <span class="number">0.15</span>
+<span class="comment">// lower attraction and lower friction</span>
+<span class="comment">// slower transitions</span>
+<span class="comment">// easier to flick past cells</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;selectedAttraction&quot;: 0.01, &quot;friction&quot;: 0.15 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/BNdbOq">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="freescrollfriction">freeScrollFriction</h3>
+
+<p>Slows movement of slider when <a href="#freescroll"><code>freeScroll: <span class="literal">true</span></code></a>. Higher friction makes the slider feel stickier. Lower friction makes the slider feel looser. Default <code><span class="comment">freeScrollFriction: 0.075</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">freeScroll: <span class="literal">true</span>,
+<span class="attr">freeScrollFriction</span>: <span class="number">0.03</span>
+<span class="comment">// lower friction, slides easier</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;freeScroll&quot;: true, &quot;freeScrollFriction&quot;: 0.03 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/jPLJvo">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h2 id="images">Images</h2>
+
+
+<h3 id="imagesloaded">imagesLoaded</h3>
+
+<p>Unloaded images have no size, which can throw off cell positions. To fix this, the <code>imagesLoaded</code> option re-positions cells once their images have loaded.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">imagesLoaded: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--images-loaded-demo" data-flickity="{ &quot;imagesLoaded&quot;: true }">
+        <img src="https://i.imgur.com/bwy74ok.jpg">
+        <img src="https://i.imgur.com/bAZWoqx.jpg">
+        <img src="https://i.imgur.com/PgmEBSB.jpg">
+        <img src="https://i.imgur.com/aboaFoB.jpg">
+        <img src="https://i.imgur.com/LkmcILl.jpg">
+        <img src="https://i.imgur.com/q9zO6tw.jpg">
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/MYQWEe">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="call-out">
+  <p><code>imagesLoaded</code> requires the <a href="https://github.com/metafizzy/flickity-imagesloaded">flickity-imagesloaded package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Webpack or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-imagesloaded</code> separately. See details in <a href="extras.html#module-loaders">Extras</a>.</p>
+</div>
+
+
+<h3 id="lazyload">lazyLoad</h3>
+
+<p>Loads cell images when a cell is selected.</p>
+
+<p>Set the image's <code>src</code> URL to load with <code>data-flickity-lazyload</code> or <code>data-flickity-lazyload-src</code>.</p>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-flickity-lazyload</span>=<span class="string">"full.jpg"</span> /&gt;</span>
+<span class="comment">&lt;!-- Set optional placeholder src --&gt;</span>
+<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"placeholder.jpg"</span> <span class="attr">data-flickity-lazyload</span>=<span class="string">"full.jpg"</span> /&gt;</span>
+</code></pre>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">lazyLoad: <span class="literal">true</span>
+<span class="comment">// lazyloads image in selected slide</span>
+</code></pre><pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-cell-image"</span>
+      <span class="attr">data-flickity-lazyload</span>=<span class="string">"tulip.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-cell-image"</span>
+      <span class="attr">data-flickity-lazyload</span>=<span class="string">"grapes.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--lazyload-cells carousel--not-counting" data-flickity="{ &quot;lazyLoad&quot;: true }">
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van">
+      </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/vOeGzL">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Set the image's <code>srcset</code> with <code>data-flickity-lazyload-srcset</code>. You can also set <code>data-flickity-lazyload-src</code> as well to set <code>src</code> for <a href="https://caniuse.com/#feat=srcset">browsers that do not support <code>srcset</code></a>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">lazyLoad: <span class="literal">true</span>
+</code></pre><pre><code class=" html
+"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-cell-image"</span>
+  <span class="attr">data-flickity-lazyload-srcset</span>=<span class="string">"
+    walrus-large.jpg 720w,
+    walrus-med.jpg 360w"</span>
+  <span class="attr">sizes</span>=<span class="string">"(min-width: 1024px) 720px, 360px"</span>
+  <span class="attr">data-flickity-lazyload-src</span>=<span class="string">"walrus-large.jpg"</span>
+  /&gt;</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--lazyload-cells carousel--not-counting" data-flickity="{ &quot;lazyLoad&quot;: true }">
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="walrus" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=1084" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=1084 720w,
+            https://picsum.photos/360/270/?image=1084 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="bokeh" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=56" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=56 720w,
+            https://picsum.photos/360/270/?image=56 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="strawberries" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=1080" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=1080 720w,
+            https://picsum.photos/360/270/?image=1080 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="wolf" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=718" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=718 720w,
+            https://picsum.photos/360/270/?image=718 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="orange tree" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=517" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=517 720w,
+            https://picsum.photos/360/270/?image=517 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" alt="tulip" data-flickity-lazyload-src="https://picsum.photos/360/270/?image=696" data-flickity-lazyload-srcset="
+            https://picsum.photos/720/540/?image=696 720w,
+            https://picsum.photos/360/270/?image=696 360w" sizes="(min-width: 1024px) 720px, 360px">
+      </div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/xWEydL">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Set <code>lazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example">
+  <div class="example__code"><pre><code class=" js
+">lazyLoad: <span class="number">2</span>
+<span class="comment">// load images in selected slide</span>
+<span class="comment">// and next 2 slides</span>
+<span class="comment">// and previous 2 slides</span>
+</code></pre>
+  </div>
+  <div class="example__demo">
+    <div class="carousel carousel--lazyload-adj-cells carousel--not-counting" data-flickity="{ &quot;lazyLoad&quot;: 2, &quot;initialIndex&quot;: 2 }">
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch">
+      </div>
+      <div class="carousel-image-cell">
+        <img class="carousel__lazy-image" data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van">
+      </div>
+    </div>
+  </div>
+  <p class="edit-demo">
+      <a href="https://codepen.io/desandro/pen/rVGLGB">Edit this demo on CodePen</a>
+  </p>
+</div>
+
+<p>After loading the image, Flickity will add <code>flickity-lazyloaded</code> class to the image, or <code>flickity-lazyerror</code> to a broken image. You can use this class to add a transition when images are loaded.</p>
+
+<pre><code class=" css
+"><span class="comment">/* fade in image when loaded */</span>
+<span class="selector-class">.carousel-cell-image</span> {
+  <span class="attribute">transition</span>: opacity <span class="number">0.4s</span>;
+  <span class="attribute">opacity</span>: <span class="number">0</span>;
+}
+
+<span class="selector-class">.carousel-cell-image</span><span class="selector-class">.flickity-lazyloaded</span>,
+<span class="selector-class">.carousel-cell-image</span><span class="selector-class">.flickity-lazyerror</span> {
+  <span class="attribute">opacity</span>: <span class="number">1</span>;
+}
+</code></pre>
+
+<p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-image"</span>
+    <span class="attr">data-flickity-lazyload</span>=<span class="string">"tulip.jpg"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"carousel-image"</span>
+    <span class="attr">data-flickity-lazyload</span>=<span class="string">"grapes.jpg"</span> /&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+<pre><code class=" css
+"><span class="selector-class">.carousel-image</span> {
+  <span class="attribute">min-width</span>: <span class="number">150px</span>;
+  <span class="attribute">height</span>: <span class="number">200px</span>;
+}
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting" data-flickity="{ &quot;lazyLoad&quot;: true }">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch">
+      <img class="carousel__lazy-image carousel__natural-image" data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van">
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/RPLRLZ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+
+<h3 id="bglazyload">bgLazyLoad</h3>
+
+<p>Loads cell background image when a cell is selected.</p>
+
+<div class="call-out">
+  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
+</div>
+
+<p>Set the background image's URL to load with <code>data-flickity-bg-lazyload</code>.</p>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span> <span class="attr">data-flickity-bg-lazyload</span>=<span class="string">"image.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">bgLazyLoad: <span class="literal">true</span>
+<span class="comment">// lazyloads background image in selected slide</span>
+</code></pre><pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>
+    <span class="attr">data-flickity-bg-lazyload</span>=<span class="string">"tulip.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>
+    <span class="attr">data-flickity-bg-lazyload</span>=<span class="string">"breakfast.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--bg-lazyload" data-flickity="{ &quot;bgLazyLoad&quot;: true }">
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/300/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/301/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/302/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/303/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/304/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/305/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/306/?random"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/jAGAEb">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Set <code>bgLazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">bgLazyLoad: <span class="number">1</span>
+<span class="comment">// lazyloads background image in selected slide</span>
+<span class="comment">// and next 1 slide</span>
+<span class="comment">// and previous 1 slide</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--show-several carousel--bg-lazyload" data-flickity="{ &quot;bgLazyLoad&quot;: 1 }">
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/420/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/421/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/422/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/423/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/424/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/425/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/426/?random"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/bZoZdG">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>After loading the background image, Flickity will add <code>flickity-bg-lazyloaded</code> class to the element, or <code>flickity-lazyerror</code> if the image was broken.</p>
+
+
+<h2 id="setup">Setup</h2>
+
+
+<h3 id="cellselector">cellSelector</h3>
+
+<p>Specify selector for cell elements. <code>cellSelector</code> is useful if you have other elements in your carousel elements that are not cells.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">cellSelector: <span class="string">'.carousel-cell'</span>
+</code></pre>
+<pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static-banner"</span>&gt;</span>Static banner 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static-banner"</span>&gt;</span>Static banner 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--cell-selector" data-flickity="{ &quot;cellSelector&quot;: &quot;.carousel-cell&quot; }">
+      <div class="static-banner static-banner1">Static banner 1</div>
+      <div class="static-banner static-banner2">Static banner 2</div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/xOXVPg">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="initialindex">initialIndex</h3>
+
+<p>Zero-based index of the initial selected cell.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">initialIndex: <span class="number">2</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;initialIndex&quot;: 2 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/vEdOKg">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>Set to a selector string to select the slide with that cell.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">initialIndex: <span class="string">'.is-initial-select'</span>
+</code></pre><pre><code class=" html
+"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell is-initial-select"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-cell"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;initialIndex&quot;: &quot;.is-initial-select&quot; }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell is-initial-select"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/MLjdBe">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+
+<h3 id="accessibility">accessibility</h3>
+
+<p>Enable keyboard navigation. Users can tab to a Flickity carousel, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">accessibility: <span class="literal">false</span>
+<span class="comment">// disables being able to tab to Flickity</span>
+<span class="comment">// and keyboard navigation</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;accessibility&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/NPyqrM">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="setgallerysize">setGallerySize</h3>
+
+<p>Sets the height of the carousel to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
+
+<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the carousel with CSS, rather than using the size of cells.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">setGallerySize: <span class="literal">false</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* carousel height */</span>
+<span class="selector-class">.carousel</span> {
+  <span class="attribute">height</span>: <span class="number">160px</span>;
+}
+
+<span class="comment">/* cell inherit height from carousel */</span>
+<span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">height</span>: <span class="number">100%</span>;
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--set-carousel-size-disabled" data-flickity="{ &quot;setGallerySize&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/jEzKNG">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the carousel to 100% width and height, for a "full-bleed" carousel.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">setGallerySize: <span class="literal">false</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* inherit height from parent */</span>
+<span class="selector-class">.carousel</span> { <span class="attribute">height</span>: <span class="number">100%</span>; }
+
+<span class="selector-class">.carousel-cell</span> { <span class="attribute">height</span>: <span class="number">100%</span> }
+
+<span class="comment">/* move page dots into carousel */</span>
+<span class="selector-class">.flickity-page-dots</span> { <span class="attribute">bottom</span>: <span class="number">10px</span>; }
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell example__demo--full-bleed">
+    <div class="carousel carousel--full-bleed" data-flickity="">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/VLrReY">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<p>You can size the carousel height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">setGallerySize: <span class="literal">false</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* carousel height, as percentage of width */</span>
+<span class="selector-class">.carousel</span> {
+  <span class="attribute">padding-bottom</span>: <span class="number">33.3%</span>;
+}
+
+<span class="comment">/* viewport inherit size from carousel */</span>
+<span class="selector-class">.carousel</span> <span class="selector-class">.flickity-viewport</span> {
+  <span class="attribute">position</span>: absolute;
+  <span class="attribute">width</span>: <span class="number">100%</span>;
+}
+
+<span class="comment">/* cell inherit height from carousel */</span>
+<span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">height</span>: <span class="number">100%</span>;
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--set-carousel-size-disabled-percentage" data-flickity="{ &quot;setGallerySize&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/dPmKyx">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="resize">resize</h3>
+
+<p>Adjusts sizes and positions when window is resized. Enabled by default <code><span class="comment">resize: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">resize: <span class="literal">false</span>
+<span class="comment">// disables resize logic</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* carousel has fixed width */</span>
+<span class="selector-class">.carousel</span> {
+  <span class="attribute">width</span>: <span class="number">300px</span>;
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--resize-option" data-flickity="{ &quot;resize&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/yyvNaG">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h2 id="cell-position">Cell position</h2>
+
+
+<h3 id="cellalign">cellAlign</h3>
+
+<p>Align cells within the carousel element.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">cellAlign: <span class="string">'left'</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;cellAlign&quot;: &quot;left&quot; }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/MYQwbx">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+"><span class="comment">// default cellAlign: 'center'</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/azqbop">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">cellAlign: <span class="string">'right'</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;cellAlign&quot;: &quot;right&quot; }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/ogEXBL">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="contain">contain</h3>
+
+<p>Contains cells to carousel element to prevent excess scroll at beginning or end. Has no effect if <code>wrapAround: true</code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">contain: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several" data-flickity="{ &quot;contain&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/QwQbdV">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="percentposition">percentPosition</h3>
+
+<p>Sets positioning in percent values, rather than pixel values. If your cells do not have percent widths, we recommended <code>percentPosition: <span class="literal">false</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+"><span class="comment">// default percentPosition: true</span>
+<span class="comment">// sets cell position in percentages</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* cell width in percent */</span>
+<span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">width</span>: <span class="number">66%</span>;
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;percentPosition&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/azqbop">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">percentPosition: <span class="literal">false</span>
+<span class="comment">// sets cell position in pixels</span>
+</code></pre>
+<pre><code class=" css
+"><span class="comment">/* cell width in pixels */</span>
+<span class="selector-class">.carousel-cell</span> {
+  <span class="attribute">width</span>: <span class="number">300px</span>;
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--pixel-position-demo" data-flickity="{ &quot;percentPosition&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/dPdoWp">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="righttoleft">rightToLeft</h3>
+
+<p>Enables right-to-left layout.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">rightToLeft: <span class="literal">true</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;rightToLeft&quot;: true }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+      <p class="edit-demo">
+          <a href="https://codepen.io/desandro/pen/ZYrGKN">Edit this demo on CodePen</a>
+      </p>
+  </div>
+</div>
+
+
+<h2 id="ui">UI</h2>
+
+
+<h3 id="prevnextbuttons">prevNextButtons</h3>Creates and enables previous &amp; next buttons. Enabled by default <code><span class="comment">prevNextButtons: true</span></code>.<p></p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">prevNextButtons: <span class="literal">false</span>
+<span class="comment">// Disable previous &amp; next buttons</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;prevNextButtons&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/QwQbQJ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="pagedots">pageDots</h3>Creates and enables page dots. Enabled by default <code><span class="comment">pageDots: true</span></code>.<p></p>
+
+<div class="duo example">
+  <div class="duo__cell example__code"><pre><code class=" js
+">pageDots: <span class="literal">false</span>
+<span class="comment">// Disable page dots</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity="{ &quot;pageDots&quot;: false }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/raJVdN">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+<h3 id="arrowshape">arrowShape</h3>
+
+<p>Draws the shape of the arrows in the previous &amp; next buttons.</p>
+
+<p>The arrow is drawn on a 100 × 100 viewbox with four points (<i>p0, p1, p2, p3</i>) made up of six coordinates <code>x0, x1, y1, x2, y2, x3</code>. The four points draw the top half on the left arrow.</p>
+
+<div class="arrow-wiz duo" data-js="arrow-wiz">
+
+  <div class="duo__cell clearfix">
+
+    <div class="arrow-wiz-illo">
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--y arrow-wiz-illo__graph-label--y-pos50">50</span>
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--y arrow-wiz-illo__graph-label--y-0">0</span>
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--y arrow-wiz-illo__graph-label--y-neg50">-50</span>
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--x arrow-wiz-illo__graph-label--x-0">0</span>
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--x arrow-wiz-illo__graph-label--x-50">50</span>
+      <span class="arrow-wiz-illo__graph-label
+        arrow-wiz-illo__graph-label--x arrow-wiz-illo__graph-label--x-100">100</span>
+
+      <canvas class="arrow-wiz-illo__canvas" width="200" height="200"></canvas>
+
+      <div class="arrow-wiz-illo__top-well">
+        <div class="arrow-wiz-illo__point arrow-wiz-illo__point--1" data-point="1">
+          <div class="arrow-wiz-illo__point__dot"></div>
+          <div class="arrow-wiz-illo__point__label">x1, y1</div>
+        </div>
+        <div class="arrow-wiz-illo__point arrow-wiz-illo__point--2" data-point="2">
+          <div class="arrow-wiz-illo__point__dot"></div>
+          <div class="arrow-wiz-illo__point__label">x2, y2</div>
+        </div>
+      </div>
+
+      <div class="arrow-wiz-illo__center-well">
+        <div class="arrow-wiz-illo__point arrow-wiz-illo__point--0" data-point="0">
+          <div class="arrow-wiz-illo__point__dot"></div>
+          <div class="arrow-wiz-illo__point__label">x0</div>
+        </div>
+        <div class="arrow-wiz-illo__point arrow-wiz-illo__point--3" data-point="3">
+          <div class="arrow-wiz-illo__point__dot"></div>
+          <div class="arrow-wiz-illo__point__label">x3</div>
+        </div>
+      </div>
+
+    </div>
+
+    <pre class="arrow-wiz-code"><code></code></pre>
+
+  </div>
+
+  <div class="duo__cell example__demo">
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/vOeKpJ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+
+
+</div>
+<p>Set a custom shape by setting <code>arrowShape</code> to a <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d">SVG path string</a>. The path is for the left arrow drawn in a 100 × 100 viewbox.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell"><pre><code class=" js
+">arrowShape: <span class="string">'M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z'</span>
+</code></pre>
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity="{ &quot;arrowShape&quot;: &quot;M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z&quot;, &quot;initialIndex&quot;: 2 }">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    <p class="edit-demo">
+        <a href="https://codepen.io/desandro/pen/vOeKdJ">Edit this demo on CodePen</a>
+    </p>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="container">
+    <ul class="site-nav__list">
+      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity v2</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--events"><a href="events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li>
+    </ul>
+  </div>
+</nav>
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <p class="site-footer__copy">Metafizzy makes delightful web plugins &amp; logos</p>
+
+    <div class="showcase">
+    
+      <ul class="showcase-item-list">
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://isotope.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="isotope-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" width="100" height="100">
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 170H30c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 166 86 170 80 170z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M80 90H30c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C90 86 86 90 80 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M160 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C170 86 166 90 160 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M240 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C250 86 246 90 240 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M320 90h-50c-6 0-10-5-10-10V30c0-6 5-10 10-10h50c6 0 10 5 10 10v50C330 86 326 90 320 90z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M155 165h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C165 161 161 165 155 165z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M230 160h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C240 156 236 160 230 160z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M305 155h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 151 311 155 305 155z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M65 235H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 231 71 235 65 235z"></path>
+                    <path class="isotope-illo__color1" fill="#6C6" d="M140 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C150 226 146 230 140 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M305 235h-20c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20 C315 231 311 235 305 235z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M65 315H45c-6 0-10-5-10-10v-20c0-6 5-10 10-10h20c6 0 10 5 10 10v20C75 311 71 315 65 315z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M150 320h-30c-6 0-10-5-10-10v-30c0-6 5-10 10-10h30c6 0 10 5 10 10v30 C160 316 156 320 150 320z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M220 230h-10c-6 0-10-5-10-10v-10c0-6 5-10 10-10h10c6 0 10 5 10 10v10 C230 226 226 230 220 230z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M235 325h-40c-6 0-10-5-10-10v-40c0-6 5-10 10-10h40c6 0 10 5 10 10v40 C245 321 241 325 235 325z"></path>
+                    <path class="isotope-illo__color2" fill="#19F" d="M320 330h-50c-6 0-10-5-10-10v-50c0-6 5-10 10-10h50c6 0 10 5 10 10v50 C330 326 326 330 320 330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Isotope</h3>
+                <p class="showcase-item__description">Filter &amp; sort magical layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://infinite-scroll.com">
+              <div class="showcase-item__image">
+                  <svg class="infinite-scroll-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="200" height="200">
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M90,110H10V90c0-22,18-40,40-40h40V110z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front1" d="M270,90L270,90c0-22-18-40-40-40h0H50h0c22,0,40,18,40,40v0v0v160h180V90z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M170,330v-20H90v20v0c0,22,18,40,40,40h0h40V330z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M350,150H210c-22,0-40,18-40,40v140v0c0,22-18,40-40,40h0h220V150z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front3" d="M430,470V270H250v160c0,22,18,40,40,40H430z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--front2" d="M250,190v20h180v-20c0-22-18-40-40-40H210h0C232,150,250,168,250,190L250,190z"></path>
+                    <path class="infinite-scroll-illo__page infinite-scroll-illo__page--back" d="M330,410v20v0c0,22-18,40-40,40h0h180c22,0,40-18,40-40v-20H330z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Infinite Scroll</h3>
+                <p class="showcase-item__description">Automatically add next page</p>
+              </div>
+            </a>
+          </li>
+    
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="https://packery.metafizzy.co">
+              <div class="showcase-item__image">
+                  <svg class="packery-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="packery-illo__item" fill="#C09" d="M172 180H48c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 176 176 180 172 180z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M172 340H48c-4 0-8-4-8-8V208c0-4 4-8 8-8h124c4 0 8 4 8 8v124C180 336 176 340 172 340z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M492 660H368c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C500 656 496 660 492 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 660H528c-4 0-8-4-8-8V528c0-4 4-8 8-8h124c4 0 8 4 8 8v124C660 656 656 660 652 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 500H368c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v124C660 496 656 500 652 500z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M332 660H48c-4 0-8-4-8-8V368c0-4 4-8 8-8h284c4 0 8 4 8 8v284C340 656 336 660 332 660z"></path>
+                    <path class="packery-illo__item" fill="#C09" d="M652 340H528c-4 0-8-4-8-8V48c0-4 4-8 8-8h124c4 0 8 4 8 8v284C660 336 656 340 652 340z"></path>
+                    <path class="packery-illo__draggie" fill="#EA0" d="M572 440H288c-4 0-8-4-8-8V148c0-4 4-8 8-8h284c4 0 8 4 8 8v284C580 436 576 440 572 440z"></path>
+                    <g>
+                      <path class="packery-illo__hand" fill="white" d="M530 250c-11 0-20 9-20 20v-10c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20s-20 9-20 20c0-11-9-20-20-20
+                        s-20 9-20 20v20c-17 0-30 13-30 30c0 11 6 20 14 25l19 35c10 18 30 30 51 30h28
+                        c43 0 78-35 78-78V270C550 259 541 250 530 250z"></path>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="430" y1="300" x2="430" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="470" y1="300" x2="470" y2="340"></line>
+                      <line class="packery-illo__hand-line" stroke="#EA0" fill="none" stroke-width="16" stroke-linecap="round" x1="510" y1="300" x2="510" y2="340"></line>
+                    </g>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Packery</h3>
+                <p class="showcase-item__description">Gapless, draggable grid layouts</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://logo.pizza">
+              <div class="showcase-item__image">
+                  <svg class="logo-pizza-illo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100" height="100">
+                    <path class="logo-pizza-illo__outline" fill="#C25" d="M513 91c-9-0-17 5-21 12l-80 160c-3 5-6 10-11 15l-47 47
+                      c-5 5-12-1-9-7l32-64c5-11-2-23-14-23h-0c-121 0-268 70-327 180
+                      C-9 497 35 609 196 609c138 0 279-85 327-180v0c5-11-2-23-14-23h-77c-13 0-19-15-10-24
+                      l81-81c5-5 11-8 18-8l0 0c13 0 19 15 10 24L494 354c-6 6-6 14 0 20c3 3 6 4 10 4
+                      c4 0 7-1 10-4l80-80h53c9 0 17-5 21-13C707 190 656 97 513 91z M334 281l-59 117
+                      c-2 5-7 8-13 8H97c-4 0-6-4-3-7c49-64 143-114 236-124C333 275 335 278 334 281z
+                       M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z M446 318l-81 81c-5 5-11 8-18 8l0 0
+                      c-13 0-19-15-10-24l81-81c5-5 11-8 18-8l0 0C449 294 455 309 446 318z M447 258L506 139
+                      c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452C448 266 445 262 447 258z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M334 281l-59 117c-2 5-7 8-13 8H97c-4 0-6-4-3-7
+                      c49-64 143-114 236-124C333 275 335 278 334 281z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M70 441c2-4 6-7 10-7h168c4 0 7 4 5 8l-59 118c-2 4-6 6-11 6
+                      C106 565 38 521 70 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M466 441c-49 64-143 114-236 124c-3 0-6-3-4-6l59-117
+                      c2-5 7-8 13-8h166C466 434 468 438 466 441z"></path>
+                    <path class="logo-pizza-illo__slice" fill="#ED0" d="M447 258L506 139c2-4 6-7 11-6c101 7 140 60 114 126c-2 4-6 7-10 7H452
+                      C448 266 445 262 447 258z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Logo Pizza</h3>
+                <p class="showcase-item__description">Hot &amp; ready logos for sale</p>
+              </div>
+            </a>
+          </li>
+    
+          <li class="showcase-item">
+            <a class="showcase-item__link" href="http://fizzy.school">
+              <div class="showcase-item__image">
+                  <svg class="witchie-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="200" height="200">
+                    <circle class="witchie-logo__moon" fill="white" cx="500" cy="500" r="500"></circle>
+                    <path class="witchie-logo__broom" fill="#EA0" d="M582 675a35 35 0 0 0 8-20 3 3 0 0 1 3-2h71a3 3 0 0 1 3 3 59 59 0 0 0 0 20 3 3 0 0 1-3 3h-79A3 3 0 0 1 582 675Zm219 4a13 13 0 0 0 13-14c-1-7-7-12-14-12h-44a3 3 0 0 0-3 3v21a3 3 0 0 0 3 3ZM299 660a203 203 0 0 1-27-36 8 8 0 0 0-4-3L178 582a13 13 0 0 0-18 12v77a8 8 0 0 0 8 8h22a5 5 0 0 1 2 10L164 703a8 8 0 0 0-4 7v28a13 13 0 0 0 18 12l146-63a3 3 0 0 0 1-5A197 197 0 0 1 299 660Z"></path>
+                    <path class="witchie-logo__dress" fill="#333" d="M326 705h4a13 13 0 0 1 13 13v8a13 13 0 0 0 4 9l13 13a13 13 0 0 1 0 19l-56 56c-10 10-26-0-22-13L314 714A13 13 0 0 1 326 705Zm397-79c-27 0-47 26-37 54 3 7 11 16 17 19a42 42 0 0 0 19 5 38 38 0 0 0 7-1 8 8 0 0 0 6-8v-62a8 8 0 0 0-6-8 38 38 0 0 0-7-1M840 397c-3-15-33-23-77-23a521 521 0 0 0-59 4 5 5 0 0 1-5-2L567 177a8 8 0 0 0-7-4 8 8 0 0 0-8 8l1 227a5 5 0 0 1-4 5c-74 24-123 55-119 76 2 8 11 14 26 18a3 3 0 0 1 1 4l-11 11c-20 20-56 30-92 30-31 0-63-8-84-23a5 5 0 0 0-3-1 5 5 0 0 0-5 5c0 78 68 173 183 173h75a10 10 0 0 0 7-3l38-38a16 16 0 0 0 0-23l-34-34a10 10 0 0 1 0-14l15-15a3 3 0 0 1 5 2v15a5 5 0 0 0 5 5H674a4 4 0 0 0 3-7l-90-90a3 3 0 0 1 1-4c34-19 59-49 67-84a3 3 0 0 1 2-2c6-1 12-1 17-1 22 0 37 5 39 14 1 6 3 11 2 17-5 17 1 31 8 31a6 6 0 0 0 2-0C797 448 845 419 840 397Z"></path>
+                  </svg>
+              </div>
+              <div class="showcase-item__text">
+                <h3 class="showcase-item__title">Fizzy School</h3>
+                <p class="showcase-item__description">Lessons in JavaScript for jQuery newbies</p>
+              </div>
+            </a>
+          </li>
+    
+      </ul> 
+    
+    </div>
+
+    <p class="site-footer__copy">
+      <a href="https://twitter.com/metafizzyco">
+        <svg class="twitter-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+          <path d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z"></path>
+        </svg>
+        Follow @metafizzyco on Twitter for Flickity updates
+      </a>
+    </p>
+
+    <div class="mfzy-brand">
+      <a class="mfzy-brand__link" href="https://metafizzy.co">
+        <svg class="mfzy-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 144 144" width="36" height="36">
+          <title>Metafizzy logo</title>
+          <defs>
+            <path id="mfzy-logo__body" d="M 120 24 a 12 12 0 0 0-24 0 a 72 72 0 0 1 -1 11
+              a 40 40 0 0 0 -13 -8.5 A 12 12 0 1 0 61.1 25.1 c -8 2 -14 6 -19.6 11.6 
+              A 12 12 0 1 0 35.3 55.5 L 45.8 72.1 l -16 9.6 A 12 12 0 0 0 42.2 102.3
+              L 58 92.8 a 20 20 0 0 1 -0.2 11.9 l -5.2 15.5 a 12 12 0 0 0 22.8 7.6
+              l 1.1 -3.3 l 23.7 -14.2 a 12 12 0 0 0 5.2 -6.5 l 4 -12 A 50 50 0 0 0 111.9 76
+              a 52 52 0 0 0 -1.6 -12.8 C 115 57 120 44 120 24Z"></path>
+            <path id="mfzy-logo__eye" d="M 0 6.5 a 6.5 6.5 0 0 1 13 0 c 0 3.5 -3 0.5 -6.5 0.5 s -6.5 3 -6.5 -0.5 Z"></path>
+            <clipPath id="mfzy-logo__body-clip">
+              <use xlink:href="#mfzy-logo__body"></use>
+            </clipPath>
+          </defs>
+          <use class="mfzy-logo__body-outline" xlink:href="#mfzy-logo__body" fill="#333" stroke="#333" stroke-width="16"></use>
+          <use class="mfzy-logo__body-fill" xlink:href="#mfzy-logo__body"></use>
+          <g class="mfzy-logo__stripes" clip-path="url(#mfzy-logo__body-clip)">
+            <rect fill="#E62" x="16" width="120" height="138"></rect>
+            <path fill="#C25" d="M96 24L16 72V0h80v24z"></path>
+            <path fill="#EA0" d="M116 70L16 130v-26l95-57 5 23z"></path>
+            <path fill="#19F" d="M136 138H16v-8l120-72v80z"></path>
+          </g>
+          <path class="mfzy-logo__cut-ins" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" d="M 72 20.4 c 23 0 44 29 44 56
+            M 54 103.4 a 16 16 0 0 0 0 -10
+            M 96 98 c -2 2 -8 6 -8.5,6 l -8.4 25.1"></path>
+          <g transform="translate(53 57) rotate(-31)">
+            <ellipse class="mfzy-logo__snout" cx="25" cy="21" rx="14" ry="9" fill="#FFF"></ellipse>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333"></use>
+            <use class="mfzy-logo__feature" xlink:href="#mfzy-logo__eye" fill="#333" transform="translate(29 0)"></use>
+            <path class="mfzy-logo__feature" d="M 28.6 14 a 3 3 0 0 1 1.3 5.6 l -2.6 1.2 a 3 3 0 0 1 -2.6 0
+              l -2.6 -1.2 a 3 3 0 0 1 1.3 -5.6 Z" fill="#333"></path>
+          </g>
+        </svg>
+        <svg class="mfzy-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none" stroke="#333" width="140" height="40">
+          <g transform="skewX(-18)">
+            <path stroke-width="8" d="M38 20h6c4 0 7 2 9 6l9 18l12-24h2v22
+            a20 22 0 0 0 20 22M48 22v28a12 15 0 0 1-24 0M98 44a6 6 0 0 0 0-12h-2
+            a8 10 0 0 0 0 20h14a8 10 0 0 0 8-10M118 12v30a8 10 0 0 0 16 0M150 36
+            q-4-4-8-4a8 10 0 1 0 8 10m0-14v14a8 10 0 0 0 8 10M184 20a9 9 0 0 0-18 0
+            v34a8 10 0 0 1-8 10M158 32h24v24M190 32h18l-12 20h18M216 32h18l-12 20h18
+            a8 10 0 0 0 8-10m0-14v14a8 10 0 0 0 16 0m0-14v38a6 6 0 0 1-12 0
+            c0-12 32-8 32-32c0-10-6-16-15-16M108 24h24a6 6 0 0 0 6-6M102 38h-4"></path>
+            <g stroke-width="6">
+              <circle cx="38" cy="22" r="3"></circle>
+              <circle cx="182" cy="20" r="3"></circle>
+              <circle cx="269" cy="20" r="3"></circle>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="js/flickity-docs.min.js?2"></script>
+
+
+
+
+</body></html>
